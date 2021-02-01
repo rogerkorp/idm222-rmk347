@@ -1,0 +1,64 @@
+:root{
+--rmk-teal: #79e0de;
+--rmk-blue: #3672b6;
+--rmk-black: #151416;
+--rmk-red: #ed3b7c;
+--rmk-yellow: #f5d34b;
+--rmk-white: #fff4fd;
+}
+
+/* General Styles */
+
+h1{ /* Used only for titles */
+    font-family: d-dindin-bold;
+    font-size: 4em;
+    text-transform: uppercase;
+}
+
+h2{ /* Used only for subtitles */
+    font-family: d-din_condensedregular;
+    font-size: 2em;
+}
+
+img{ /* This prevents all images on the site from overflowing. */
+    max-width: 100%;
+}
+
+/* Home Styles */
+
+#home-title{
+    margin: 0em;
+}
+
+#home-subtitle{
+    margin: 0em;
+}
+
+#home-body{
+    background-color: var(--rmk-blue);
+}
+
+#home-header{
+background-color: var(--rmk-red);
+padding: 2em;
+}
+
+/* Typography */
+
+@font-face {
+    font-family: 'd-dindin-bold';
+    src: url('../fonts/d-din-bold/d-din-bold-webfont.woff2') format('woff2'),
+         url('../fonts/d-din-bold/d-din-bold-webfont.woff') format('woff'),
+         url('../fonts/d-din-bold/d-din-bold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'd-din_condensedregular';
+    src: url('../fonts/d-din-condensed/d-dincondensed-webfont.woff2') format('woff2'),
+         url('../fonts/d-din-condensed/d-dincondensed-webfont.woff') format('woff'),
+         url('../fonts/d-din-condensed/d-dincondensed-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
