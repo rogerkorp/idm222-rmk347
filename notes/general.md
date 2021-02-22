@@ -38,3 +38,17 @@ This project will be a redesign of my original final from last term, but with th
 
 - **Toybox** section for JavaScript internet toys. Like that one guy from *Analog In, Digital Out* has. Maybe I could add in the Zodiac Project into it when I'm done with it?
 
+# Breakpoints
+
+Okay, so because this website is going to incorperate some RWD elements, I'm going to have to settle on some rules.
+
+Generally speaking, there are **four** major breakpoints I should account for. While there are, of course, a variety of screensizes, we need to accomidate these things first:
+
+**320 by 480** or **2:3** (3.2in by 4.8in)
+The smallest screen size for modern, web-surfing devices. Established by the first iPhone in 2007, the last time a similar resolution was used was in 2016 with the iPhone SE which used the same screen as the 5s. *This will be the baseline*
+
+**768 / 1024** or **4:3** / **3:4** (7.6in by 10.24in)
+Accounts for both portrait and landscape modes for tablet computers. Remember that these will still need to have large buttons and easy to use triggers due to the fact that the user will operate these kinds of devices with thier fingers.
+
+**Anything 960px x 1280p or Above** also **4:3** (9.60in x 12.80in)
+This is when we start seeing desktop-class resolutions.

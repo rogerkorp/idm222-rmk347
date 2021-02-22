@@ -13,34 +13,33 @@ h1{ /* Used only for titles */
     font-family: d-dindin-bold;
     font-size: 4em;
     text-transform: uppercase;
+    margin: 0px;
 }
 
 h2{ /* Used only for subtitles */
     font-family: d-din_condensedregular;
     font-size: 2em;
+    margin: 0px;
+}
+
+p{
+    font-family: robotolight;
+    font-size: 1em;
 }
 
 img{ /* This prevents all images on the site from overflowing. */
     max-width: 100%;
 }
 
-/* Home Styles */
-
-#home-title{
-    margin: 0em;
+a{
+    font-family: robotobold;
+    font-size: 1em;
 }
 
-#home-subtitle{
-    margin: 0em;
-}
-
-#home-body{
-    background-color: var(--rmk-blue);
-}
-
-#home-header{
-background-color: var(--rmk-red);
-padding: 2em;
+body{
+    background-color: var(--rmk-black);
+    color: var(--rmk-white);
+    margin: 0px;
 }
 
 /* Typography */
@@ -61,4 +60,80 @@ padding: 2em;
          url('../fonts/d-din-condensed/d-dincondensed-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotolight';
+    src: url('../fonts/roboto/roboto-light-webfont.woff2') format('woff2'),
+         url('../fonts/roboto/roboto-light-webfont.woff') format('woff'),
+         url('../fonts/roboto/roboto-light-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotolight_italic';
+    src: url('../fonts/roboto/roboto-lightitalic-webfont.woff2') format('woff2'),
+         url('../fonts/roboto/roboto-lightitalic-webfont.woff') format('woff'),
+         url('../fonts/roboto/roboto-lightitalic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotobold';
+    src: url('../fonts/roboto/roboto-bold-webfont.woff2') format('woff2'),
+         url('r../fonts/roboto/oboto-bold-webfont.woff') format('woff'),
+         url('../fonts/roboto/roboto-bold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotobold_italic';
+    src: url('../fonts/roboto/roboto-bolditalic-webfont.woff2') format('woff2'),
+         url('../fonts/roboto/roboto-bolditalic-webfont.woff') format('woff'),
+         url('r../fonts/roboto/oboto-bolditalic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* index page */
+
+#mainTitle{
+    text-align: center;   
+}
+
+.mainWave{
+    height: 5em;
+    background-color: var(--rmk-white);
+    border-radius: 50%;
+    width: 50%;
+    display: flex;
+    flex-wrap: no-wrap;
+    flex: 1;
+    float: left;
+}
+
+#blackWave{
+    background-color: var(--rmk-black);
+}
+
+.mainNav{
+    background-color: var(--rmk-white);
+    height: 500em;
+    position: relative;
+    top: 2.5em;
+    display: flex;
+}
+
+@media screen and (min-width: 320px){
+
+}
+
+@media screen and (min-width: 768px){
+}
+
+@media screen and (min-width: 960px){
+
 }
