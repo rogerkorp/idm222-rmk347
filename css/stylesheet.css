@@ -11,7 +11,7 @@
 
 h1{ /* Used only for titles */
     font-family: d-dindin-bold;
-    font-size: 4em;
+    font-size: 15vw;
     text-transform: uppercase;
     margin: 0px;
 }
@@ -100,32 +100,61 @@ body{
 
 /* index page */
 
-#mainTitle{
-    text-align: center;   
-}
-
-.mainWave{
-    height: 5em;
+#mainBackground{
     background-color: var(--rmk-white);
-    border-radius: 50%;
-    width: 50%;
-    display: flex;
-    flex-wrap: no-wrap;
-    flex: 1;
-    float: left;
 }
 
-#blackWave{
+#mainNegative{
+    display: flex;
+    width: 100%;
+    height: 45vw;
     background-color: var(--rmk-black);
+    z-index: 1;
+    position: absolute;
+    top: 0px;
 }
 
-.mainNav{
-    background-color: var(--rmk-white);
-    height: 500em;
-    position: relative;
-    top: 2.5em;
-    display: flex;
+#mainTitle{
+    text-align: center;
+    z-index: 2; 
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
+
+.waveAnimation{
+    display: flex;
+    height: 20vw;
+    width: 100%;
+    animation: wave 10s linear 0s infinite normal;
+    overflow: hidden;
+    border-radius: 100%;
+    flex-wrap: wrap;
+    z-index: 3;
+    position: absolute;
+    top: 35vw;
+}
+
+#white{
+    background-color: var(--rmk-white);
+}
+
+#black{
+    background-color: var(--rmk-black);
+    animation-delay: -5s;
+}
+
+@keyframes wave{
+    0%{
+        margin-left: -100%
+    }
+
+    100%{
+        margin-left: 100%;
+    }   
+}
+
 
 @media screen and (min-width: 320px){
 
