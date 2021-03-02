@@ -1,12 +1,16 @@
 :root{
---rmk-teal: #79e0de;
+--rmk-teal: #b9f7ff;
 --rmk-light-blue: #9cd0ec;
---rmk-blue: #3672b6;
+--rmk-blue: #4c60b5;
 --rmk-navy: #324c75;
---rmk-black: #151416;
---rmk-red: #ed3b7c;
---rmk-yellow: #f5d34b;
+--rmk-black: #232324;
+--rmk-red: #f582b3;
+--rmk-yellow: #ffde86;
 --rmk-white: #fff4fd;
+--rmk-dark-red: #680138;
+--rmk-dark-yellow: #6f6330;
+--rmk-dark-teal: #1e5553;
+--rmk-dark-blue: #363265;
 }
 
 /* General Styles */
@@ -157,10 +161,99 @@ body{
     cursor: pointer;
 }
 
+/* navigation header */
+
+.navigation{
+    background-color: white;
+    height: 75px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 40px auto repeat(4, 70px)
+}
+
+#navTest{
+    box-shadow: darkgrey 0px 10px 10px;
+}
+
+.monogram{
+    writing-mode: vertical-rl;
+    font-size: .5em;
+    grid-area: 1 / 1 / 2 / 2;
+    text-align: center;
+}
+
+#monoTest{
+    color: white;
+    background-color: var(--rmk-black);
+}
+
+.nav-buttons:hover{
+    cursor: pointer;
+    transition: background-color .5s;
+}
+
+.nav-buttons{
+    font-size: .3em;
+    text-align: center;
+    padding-top: 7px;
+}
+
+.nav-buttons img {
+    border-radius: 100%;
+}
+
+/* about button */
+
+#nav-about{
+    color: var(--rmk-dark-red);
+    grid-area: 1/3/2/4;
+}
+
+#nav-about:hover{
+    background-color: var(--rmk-red);
+}
+
+/* work button */
+
+#nav-work{
+    color: var(--rmk-dark-yellow);
+    grid-area: 1/4/2/5;
+}
+
+#nav-work:hover{
+    background-color: var(--rmk-yellow);
+}
+
+/* art button */
+
+#nav-art{
+    color: var(--rmk-dark-teal);
+    grid-area: 1/5/2/6;
+}
+
+#nav-art:hover{
+    background-color: var(--rmk-teal);
+}
+
+/* blog button */
+
+#nav-blog{
+    color: var(--rmk-dark-blue);
+    grid-area: 1/6/2/7;
+}
+
+#nav-blog:hover{
+    background-color: var(--rmk-light-blue);
+}
+
+#bodyTest{
+    background-color: lightgray;
+}
+
 @media screen and (min-width: 320px){
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 450px){
 }
 
 @media screen and (min-width: 960px){
