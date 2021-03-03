@@ -4,6 +4,7 @@
 --rmk-blue: #4c60b5;
 --rmk-navy: #324c75;
 --rmk-black: #232324;
+--rmk-pink: #ffdaeb;
 --rmk-red: #f582b3;
 --rmk-yellow: #ffde86;
 --rmk-white: #fff4fd;
@@ -23,7 +24,7 @@ h1{ /* Used only for titles */
 }
 
 h2{ /* Used only for subtitles */
-    font-family: d-din_condensedregular;
+    font-family: robotobold;
     font-size: 2em;
     margin: 0px;
 }
@@ -161,6 +162,104 @@ body{
     cursor: pointer;
 }
 
+/* about page */
+
+.aboutSegment{
+    background-color: white;
+    margin-top: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2em;
+    border-radius: 2em;
+    box-shadow: pink 0px 10px 20px;
+}
+
+.aboutSegment h1{
+    text-transform: none;
+    text-align: center;
+    font-size: 3em;
+    color: var(--rmk-dark-red);
+    padding-bottom: .5em;
+}
+
+.aboutSegment img{
+    border-radius: 2em;
+    padding-bottom: .5em;
+}
+
+#contact{
+    margin-bottom: 2em;
+}
+
+#contactImage{
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 1em;
+    border-radius: 100%;
+}
+#aboutMeImage{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.aboutContact{
+    border-radius: 2em;
+    max-width: 400px;
+    padding: 10px;
+    text-align: center;
+    border: 5px var(--rmk-red) solid;
+    margin-bottom: .5em;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: robotobold;
+    color: var(--rmk-dark-red);
+}
+
+#resumeLink{
+    border-radius: 2em;
+    background-color: var(--rmk-red);
+    font-family: robotobold;
+    max-width: 250px;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    transition: background-color .5s;
+}
+
+#resumeLink:hover{
+    cursor: pointer;
+    background-color: var(--rmk-dark-red);
+}
+
+@media screen and (min-width: 768px){
+    #aboutMain{
+        display: grid;
+        grid-template-columns: .25fr 1fr 2em 2fr .25fr;
+    }
+    #aboutMe{
+        grid-area: 1 / 4 / 2 / 5;
+    }
+    #contact{
+      grid-area: 1 / 2 / 2 / 3;  
+    }
+}
+
+@media screen and (min-width: 1024px){
+    #aboutMain{
+        display: grid;
+        grid-template-columns: auto 330px 2em 660px auto;
+    }
+    #aboutMe{
+        grid-area: 1 / 4 / 2 / 5;
+    }
+    #contact{
+      grid-area: 1 / 2 / 2 / 3;  
+    }
+}
+
 /* navigation header */
 
 .navigation{
@@ -175,16 +274,24 @@ body{
     box-shadow: darkgrey 0px 10px 10px;
 }
 
+#navAbout{
+    box-shadow: var(--rmk-red) 0px 0px 20px;
+}
+
 .monogram{
     writing-mode: vertical-rl;
     font-size: .5em;
     grid-area: 1 / 1 / 2 / 2;
     text-align: center;
+    color: white;
 }
 
 #monoTest{
-    color: white;
     background-color: var(--rmk-black);
+}
+
+#monoAbout{
+    background-color: var(--rmk-dark-red);
 }
 
 .nav-buttons:hover{
@@ -210,7 +317,7 @@ body{
 }
 
 #nav-about:hover{
-    background-color: var(--rmk-red);
+    background-color: var(--rmk-pink);
 }
 
 /* work button */
@@ -223,6 +330,7 @@ body{
 #nav-work:hover{
     background-color: var(--rmk-yellow);
 }
+
 
 /* art button */
 
