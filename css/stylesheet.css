@@ -6,7 +6,9 @@
 --rmk-black: #232324;
 --rmk-pink: #ffdaeb;
 --rmk-red: #f582b3;
---rmk-yellow: #ffde86;
+--rmk-yellow: #fdeec4;
+--rmk-yellow-but-not-really: #f1ca5d;
+--rmk-orange: #ffd092;
 --rmk-white: #fff4fd;
 --rmk-dark-red: #680138;
 --rmk-dark-yellow: #6f6330;
@@ -311,8 +313,35 @@ body{
     margin-right: auto;
     margin-top: 2em;
     padding: 2em;
-    box-shadow: darkgrey 0px 10px 20px;
+    box-shadow: var(--rmk-orange) 0px 10px 20px;
 }
+
+.workArticle{
+    display: block;
+    background-color: white;
+    max-width: 800px;
+    border-radius: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding: 2em;
+    box-shadow: var(--rmk-orange) 0px 10px 20px;
+}
+
+.workSubheading{
+    font-family: roboto;
+    font-style: italic;
+    color: gray;
+}
+
+.workArticle .workImage{
+    text-align: center;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 .workHeading{
     font-size: 1.5em;
@@ -321,7 +350,7 @@ body{
     padding: 0px 0px .5em 0px;
     margin-bottom: 1.5em;
     border-bottom-width: 2px;
-    border-bottom-color: darkgrey;
+    border-bottom-color: var(--rmk-orange);
     border-bottom-style: solid;
 }
 
@@ -332,12 +361,16 @@ body{
     font-size: 1.25em;
 }
 
+#workLast{
+    margin-bottom: 2em;
+}
+
 .workLink{
     margin-left: 1em;
     font-size: 1.25em;
     font-family: robotobold;
     text-transform: uppercase;
-    background-color: darkgrey;
+    background-color: var(--rmk-yellow-but-not-really);
     color: white;
     max-width: 8em;
     text-align: center;
@@ -348,7 +381,7 @@ body{
 }
 
 .workLink:hover{
-    background-color: var(--rmk-black);
+    background-color: var(--rmk-dark-yellow);
 }
 
 .workImage img{
@@ -389,6 +422,10 @@ body{
         box-shadow: var(--rmk-red) 0px 0px 20px;
     }
 
+    #navWork{
+        box-shadow: var(--rmk-orange) 0px 0px 20px;
+    }
+
     .monogram{
         writing-mode: vertical-rl;
         font-size: .5em;
@@ -403,6 +440,10 @@ body{
 
     #monoAbout{
         background-color: var(--rmk-dark-red);
+    }
+
+    #monoWork{
+        background-color: var(--rmk-dark-yellow);
     }
 
     .nav-buttons:hover{
@@ -467,6 +508,10 @@ body{
 
     #bodyTest{
         background-color: lightgray;
+    }
+
+    #bodyWork{
+        background-color: var(--rmk-yellow);
     }
 
 @media screen and (min-width: 320px){
