@@ -14,6 +14,15 @@
 --rmk-dark-yellow: #6f6330;
 --rmk-dark-teal: #1e5553;
 --rmk-dark-blue: #363265;
+--youtube: #ff0015;
+--linkedin: #0077b4;
+--twitter: #1da1f2;
+--instagram: #ff63b3;
+--spotify: #43ab55;
+--youtube-dark: #81004b;
+--linkedin-dark: #01393f;
+--twitter-dark: #03484b;
+--instagram-dark: #4b0247;
 }
 
 /* General Styles */
@@ -43,6 +52,7 @@ img{ /* This prevents all images on the site from overflowing. */
 a{
     font-family: robotobold;
     font-size: 1em;
+    text-decoration: none;
 }
 
 body{
@@ -50,6 +60,7 @@ body{
     color: var(--rmk-black);
     margin: 0px;
 }
+
 
 /* Typography */
 
@@ -126,7 +137,7 @@ body{
     margin-left:auto;
     margin-right:auto;
     margin-top: 2vmin;
-    margin-bottom: 5vmin;
+    margin-bottom: 2em;
     text-align: center;
     align-items: center;
     display: block;
@@ -136,29 +147,137 @@ body{
     box-shadow: var(--rmk-blue) 20px 20px 20px;
 }
 
-.homeBox button{
+.social{
     border-radius: 100%;
-    height: 6em;
-    width: 6em;
-    margin: 2vh .5vw;
+    height: 4em;
+    width: 4em;
+    margin: 2vh 1vw;
     border: none;
+    max-width: 100px;
+    display: flex;
+    transition: background-color .5s;
 }
 
-#twitter{
-    background-color: var(--rmk-light-blue);
+.socials{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
 }
 
-#linkedin{
-    background-color: var(--rmk-navy);
+.social img{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25%;
 }
 
-#youtube{
+.homeLinks{
+    display: block;
+    padding: .5em;
+    max-width: 400px;
+    border-radius: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    color: var(--rmk-white);
+    transition: background-color .5s;
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+
+.homeBox a:hover{
+   cursor: pointer;
+}
+
+#indexAbout{
     background-color: var(--rmk-red);
 }
 
-#instagram{
-    background-color: var(--rmk-yellow);
+#indexAbout:hover{
+    background-color: var(--rmk-dark-red);
 }
+
+#indexWork{
+    background-color: var(--rmk-yellow-but-not-really);
+}
+
+#indexWork:hover{
+    background-color: var(--rmk-dark-yellow);
+}
+
+#indexArt{
+    background-color: var(--rmk-light-blue);
+}
+
+#indexArt:hover{
+    background-color: var(--rmk-dark-teal);
+}
+
+#indexBlog{
+    background-color: var(--rmk-blue);
+}
+
+#indexBlog:hover{
+    background-color: var(--rmk-dark-blue);
+}
+
+#twitter{
+    background-color: var(--twitter);
+}
+
+#linkedin{
+    background-color: var(--linkedin);
+}
+
+#youtube{
+    background-color: var(--youtube);
+}
+
+#instagram{
+    background-color: var(--instagram);
+}
+
+#twitter img{
+    margin-top: 30%;
+    max-height:37.5%;
+    max-width: 75%;
+}
+
+#youtube img{
+    margin-top: 30%;
+    max-height:37.5%;
+    max-width: 75%;
+}
+
+#linkedin img{
+    max-height: 45%;
+    max-width: 45%;
+    margin-top: 25%;
+}
+
+#instagram img{
+    max-height: 50%;
+    max-width: 50%;
+    margin-top: 25%;
+}
+
+#twitter:hover{
+    background-color: var(--twitter-dark);
+}
+
+#linkedin:hover{
+    background-color: var(--linkedin-dark);
+}
+
+#youtube:hover{
+    background-color: var(--youtube-dark);
+}
+
+#instagram:hover{
+    background-color: var(--instagram-dark);
+}
+
+
 
 .homeBox button:hover{
     cursor: pointer;
@@ -177,10 +296,9 @@ body{
 }
 
 .aboutSegment h1{
-    text-transform: none;
     text-align: center;
     font-size: 3em;
-    color: var(--rmk-dark-red);
+    color: black;
     padding-bottom: .5em;
 }
 
@@ -208,6 +326,7 @@ body{
 }
 
 .aboutContact{
+    display: block;
     border-radius: 2em;
     max-width: 400px;
     padding: 10px;
@@ -218,6 +337,60 @@ body{
     margin-right: auto;
     font-family: robotobold;
     color: var(--rmk-dark-red);
+    transition: all .5s;
+    transition-property: background-color, color;
+}
+
+#lnkn{
+    border: 5px var(--linkedin) solid;
+}
+
+#twttr{
+    border: 5px var(--twitter) solid; 
+}
+
+#insta{
+    border: 5px var(--instagram) solid; 
+}
+
+#ytb{
+    border: 5px var(--youtube) solid; 
+}
+
+#spotify{
+    border: 5px var(--spotify) solid; 
+}
+
+.aboutContact:hover{
+    background-color: var(--rmk-red);
+    color: white;
+}
+
+#lnkn:hover{
+    background-color: var(--linkedin);
+}
+
+#twttr:hover{
+    background-color: var(--twitter);
+}
+
+#instahover{
+    background-color: var(--instagram);
+}
+
+#ytb:hover{
+    background-color: var(--youtube);
+}
+#spotify:hover{
+    background-color: var(--spotify);
+}
+
+#firstResume{
+    margin-top: 100px;
+}
+
+#lastResume{
+    margin-bottom: 50px;
 }
 
 #resumeLink{
@@ -234,6 +407,10 @@ body{
 #resumeLink:hover{
     cursor: pointer;
     background-color: var(--rmk-dark-red);
+}
+
+#aboutMain{
+    padding-top: 75px;
 }
 
 @media screen and (min-width: 768px){
@@ -280,6 +457,13 @@ body{
     box-shadow: darkgray 0px 10px 20px;
 }
 
+.resumeSegment h2{
+    text-transform: uppercase;
+    margin-bottom: .5em;
+    padding-bottom: .5em;
+    border-bottom: 2px lightgray solid;
+}
+
 .resumeSubsegment{
     margin: 1em;
     border-radius: 1.5em;
@@ -290,12 +474,24 @@ body{
     background-color: var(--rmk-light-blue);
 }
 
+#experience1 h2{
+    border-bottom: 2px var(--rmk-blue) solid;
+}
+
 #project1{
     background-color: var(--rmk-red);
 }
 
+#project1 h2{
+    border-bottom: 2px var(--rmk-dark-red) solid;
+}
+
 #project2{
     background-color: var(--rmk-yellow);
+}
+
+#project2 h2{
+    border-bottom: 2px var(--rmk-dark-yellow) solid;
 }
 
 .resumeSubtitle{
@@ -388,6 +584,132 @@ body{
     border-radius: 1em;
 }
 
+
+#mainArt{
+    display: grid;
+    max-width: 1024px;
+    margin-top: 120px;
+    margin-bottom: 1em;
+    background-color: white;
+    padding: 1em;
+    border-radius: 1em;
+    box-shadow: var(--rmk-light-blue) 10px 10px 20px;
+}
+
+#mainArt a{
+    padding: .5em;
+    transition: padding .5s;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#mainArt a:hover{
+    padding: 0px;
+}
+
+#mainArt picture{
+    max-width: 100%;
+}
+
+/* Individual Art*/
+
+#singleArt{
+    margin-top: 120px;
+    padding: 2em;
+    max-width: 800px;
+    display:flex;
+    flex-flow: column nowrap;
+    background-color: white;
+    box-shadow: var(--rmk-blue) 0px 10px 20px;
+    border-radius: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: flex-start;
+}
+#singleArt picture{
+    order: 1;
+    padding: 1em;
+    align-self: center;
+}
+
+#singleArt img{
+    border-radius: 1em;
+}
+
+#singleArt h1{
+    color: var(--rmk-dark-teal);
+    order: 2;
+    padding: .25em;
+    align-self: flex-start;
+    font-size: 3em;
+    
+}
+@media screen and (min-width: 700px){
+    #singleArt h1{
+        font-size: 4em;
+    }
+}
+
+#artLink{
+    border-radius: 2em;
+    background-color: var(--rmk-light-blue);
+    font-family: robotobold;
+    min-width: 150px;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    transition: background-color .5s;
+    order: 4;
+    text-transform: uppercase;
+}
+
+#artLink:hover{
+    cursor: pointer;
+    background-color: var(--rmk-dark-teal);
+}
+
+#artDescription{
+    display: flex;
+    order: 3;
+    flex-flow: column nowrap;
+    border-top-width: 2px;
+    border-top-color: var(--rmk-teal);
+    border-top-style: solid;
+    padding-top: 1em;
+    font-size: 1.25em;
+}
+
+#artDescription p{
+    padding-left: 1em;
+    padding-right: 1em;
+}
+@media screen and (min-width: 700px){
+    #artDescription{
+        flex-flow: row nowrap;
+    }
+}
+
+@media screen and (min-width: 900px){
+    #mainArt{
+        display: grid;
+        margin-left: auto;
+        margin-right: auto;
+        grid-template-columns: repeat(3 ,1fr);
+        grid-template-rows: repeat(3 ,1fr);
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 900px){
+    #mainArt{
+        display: grid;
+        margin-left: auto;
+        margin-right: auto;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+    }
+}
+
+
 @media screen and (min-width: 768px){
     
     .workSegment{
@@ -407,6 +729,8 @@ body{
 /* navigation header */
 
     .navigation{
+        position: fixed;
+        top: 0px;
         background-color: white;
         height: 75px;
         width: 100%;
@@ -426,12 +750,20 @@ body{
         box-shadow: var(--rmk-orange) 0px 0px 20px;
     }
 
+    #navArt{
+        box-shadow: var(--rmk-blue) 0px 0px 20px;
+    }
+
     .monogram{
         writing-mode: vertical-rl;
         font-size: .5em;
         grid-area: 1 / 1 / 2 / 2;
         text-align: center;
         color: white;
+    }
+
+    .monogram:hover{
+        cursor:pointer;
     }
 
     #monoTest{
@@ -444,6 +776,10 @@ body{
 
     #monoWork{
         background-color: var(--rmk-dark-yellow);
+    }
+
+    #monoArt{
+        background-color: var(--rmk-dark-teal);
     }
 
     .nav-buttons:hover{
@@ -511,7 +847,12 @@ body{
     }
 
     #bodyWork{
+        margin-top: 100px;
         background-color: var(--rmk-yellow);
+    }
+
+    #bodyArt{
+        background-color: var(--rmk-teal);
     }
 
 @media screen and (min-width: 320px){

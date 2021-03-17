@@ -3,21 +3,22 @@
     <head>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title></title>
-        <link rel="stylesheet" href="../../css/stylesheet.css">
+        <title>RMK - Resume</title>
+        <link rel="stylesheet" href="../css/stylesheet.css">
     </head>
     <body id="resume"> 
         <div class="navigation" id="navTest">
-            <div class="monogram" id="monoTest"><h1>RMK</h1></div>
-            <div class="nav-buttons" id="nav-about"><img src="https://via.placeholder.com/40"><h1>About</h1></div>
-            <div class="nav-buttons" id="nav-work"><img src="https://via.placeholder.com/40"><h1>Work</h1></div>
-            <div class="nav-buttons" id="nav-art"><img src="https://via.placeholder.com/40"><h1>Art</h1></div>
-            <div class="nav-buttons" id="nav-blog"><img src="https://via.placeholder.com/40"><h1>Blog</h1></div>
+            <div onclick="location.href='../index.html';" class="monogram" id="monoTest"><h1>RMK</h1></div>
+            <div onclick="location.href='../about/about.html';" class="nav-buttons" id="nav-about"><img src="../content/about.jpg"><h1>About</h1></div>
+            <div onclick="location.href='../work/work.html';" class="nav-buttons" id="nav-work"><img src="../content/work.jpg"><h1>Work</h1></div>
+            <div onclick="location.href='../art/art.html';"class="nav-buttons" id="nav-art"><img src="../content/art.jpg"><h1>Art</h1></div>
+            <div class="nav-buttons" id="nav-blog"><img src="../content/blog.jpg"><h1>Blog</h1></div>
         </div>
         
-        <div class="resumeSegment">
-            <h2>Roger Korpics</h2>
-            <p>rogerkorpics@gmail.com</p>
+        <div class="resumeSegment" id=firstResume>
+            <h2>Contact Information</h2>
+            <b>Name: </b>Roger M. Korpics<br>
+            <b>Email: </b>rogerkorpics@gmail.com
         </div>
        
         <div class="resumeSegment">
@@ -32,9 +33,9 @@
         <div class="resumeSegment">
             <h2>Skills</h2>
             <ul>
-                <li>Hardware: PC, Macintosh</li>
-                <li>Software: Adobe Photoshop, Software: Adobe Photoshop/Illustrator/Bridge/XD/After Effects/PremierePro, Sketch, Flinto, Microsoft Excel/Word/PowerPoint, Processing, Arduino</li>
-                <li>Operating Systems: Windows 10/8.1/8/7, macOS Big Sur/Catalina/Mojave, iOS</li>
+                <li><b>Hardware:</b> PC, Macintosh</li>
+                <li><b>Software:</b> Adobe Photoshop, Software: Adobe Photoshop/Illustrator/Bridge/XD/After Effects/PremierePro, Sketch, Flinto, Microsoft Excel/Word/PowerPoint, Processing, Arduino</li>
+                <li><b>Operating Systems</b> Windows 10/8.1/8/7, macOS Big Sur/Catalina/Mojave, iOS</li>
             </ul>
         </div>
 
@@ -89,7 +90,7 @@
             </ul>
         </div>
 
-        <div class="resumeSegment">
+        <div class="resumeSegment" id=lastResume>
             <h2>Honors</h2>
             <ul>
                 <li>Dean's List, Fall 2019, Spring 2020, Fall 2020</li>
