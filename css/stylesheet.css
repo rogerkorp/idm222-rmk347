@@ -534,8 +534,7 @@ video{
 .workArticle{
     display: block;
     background-color: white;
-    max-width: 800px;
-    border-radius: 2em;
+    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 2em;
@@ -552,7 +551,6 @@ video{
 
 .workArticle .workImage{
     text-align: center;
-    max-width: 500px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -615,6 +613,13 @@ video{
         grid-area: 1 / 1 / 4 / 2;
     }
 }
+
+@media screen and (min-width: 1070px){
+    .workArticle{
+        border-radius: 2em;
+    }
+}
+
 
 @media screen and (min-width: 1224px){
     .workHeading{
