@@ -72,6 +72,7 @@ body{
 video{ 
     height: auto !important;
     width: 100% !important;
+    position: relative;
 }
 
 /* Typography */
@@ -140,6 +141,7 @@ video{
     position: fixed;
     top: 0px;
     width: 100%;
+    z-index: 1;
 }
 
 #burgerMenu{
@@ -152,6 +154,7 @@ video{
     text-transform: uppercase;
     top: 43px;
     width: 100%;
+    z-index: 1;
 }
 
 #burgerMenu .homeLinks{
