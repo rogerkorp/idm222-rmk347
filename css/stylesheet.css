@@ -28,25 +28,25 @@
 /* General Styles */
 
 h1{ /* Used only for titles */
-    font-family: d-dindin-bold;
+    font-family: 'd-dindin-bold';
     font-size: 4em;
-    text-transform: uppercase;
     margin: 0px;
+    text-transform: uppercase;
 }
 
 h2{ /* Used only for subtitles */
-    font-family: robotobold;
+    font-family: 'robotobold';
     font-size: 2em;
     margin: 0px;
 }
 
 p{
-    font-family: robotolight;
+    font-family: 'robotolight';
     font-size: 1em;
 }
 
 i{
-    font-family: robotolight;
+    font-family: 'robotolight';
     font-size: 1em;
     font-style: italic;
 }
@@ -56,7 +56,7 @@ img{ /* This prevents all images on the site from overflowing. */
 }
 
 a{
-    font-family: robotobold;
+    font-family: 'robotobold';
     font-size: 1em;
     text-decoration: none;
 }
@@ -64,12 +64,14 @@ a{
 body{
     background-color: var(--rmk-white);
     color: var(--rmk-black);
+    font-family: 'robotolight';
+    font-size: 1em;
     margin: 0px;
 }
 
 video{ 
-    width: 100% !important;
     height: auto !important;
+    width: 100% !important;
 }
 
 /* Typography */
@@ -128,48 +130,261 @@ video{
     font-style: normal;
 }
 
-/* index page */
+/* Navigation Bar */
+
+.headerNav{
+    background-color: white;
+    display: grid;
+    grid-template-columns: 40px auto repeat(4, 70px);
+    height: 75px;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+}
+
+#burgerMenu{
+    background-color: white;
+    display: none;
+    font-size: 2em;
+    height: 100%;
+    list-style-type: none;
+    position: fixed;
+    text-transform: uppercase;
+    top: 43px;
+    width: 100%;
+}
+
+#burgerMenu .homeLinks{
+    border-radius: 0px;;
+    color: white;
+    display: flex;
+    flex-flow: column nowrap;
+    height:75px;
+    left: -40px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    max-width: 100%;
+    padding: .1em;
+    position: relative;
+    text-align: center;
+}
+
+#navTest{
+    box-shadow: darkgrey 0px 10px 10px;
+}
+
+#navAbout{
+    box-shadow: var(--rmk-red) 0px 0px 20px;
+}
+
+#navWork{
+    box-shadow: var(--rmk-orange) 0px 0px 20px;
+}
+
+#navArt{
+    box-shadow: var(--rmk-blue) 0px 0px 20px;
+}
+
+#navBlog{
+    box-shadow: var(--rmk-navy) 0px 0px 20px;
+}
+
+.monogram{
+    color: white;
+    font-family: d-dindin-bold;;
+    font-size: 2em;
+    grid-area: 1 / 1 / 2 / 2;
+    margin: 0px;
+    text-align: center;
+    text-transform: uppercase;
+    writing-mode: vertical-rl;
+}
+
+.monogram:hover{
+    cursor:pointer;
+}
+
+#monoTest{
+    background-color: var(--rmk-black);
+}
+
+#monoAbout{
+    background-color: var(--rmk-dark-red);
+}
+
+#monoWork{
+    background-color: var(--rmk-dark-yellow);
+}
+
+#monoArt{
+    background-color: var(--rmk-dark-teal);
+}
+
+#monoBlog{
+    background-color: var(--rmk-dark-blue);
+}
+
+
+.nav-buttons:hover{
+    cursor: pointer;
+    transition: background-color .5s;
+}
+
+.nav-buttons{
+    display: none;
+    font-family: d-dindin-bold;
+    font-size: 1.3em;
+    margin: 0px;
+    padding-top: 7px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.nav-buttons img {
+    max-height: 40px;
+}
+
+/* about button */
+
+#nav-about{
+     color: var(--rmk-dark-red);
+      grid-area: 1/3/2/4;
+}
+
+#nav-about:hover{
+    background-color: var(--rmk-pink);
+}
+
+/* work button */
+
+#nav-work{
+    color: var(--rmk-dark-yellow);
+    grid-area: 1/4/2/5;
+}
+
+#nav-work:hover{
+    background-color: var(--rmk-yellow);
+}
+
+
+/* art button */
+
+#nav-art{
+    color: var(--rmk-dark-teal);
+    grid-area: 1/5/2/6;
+}
+
+#nav-art:hover{
+    background-color: var(--rmk-teal);
+}
+
+/* blog button */
+
+#nav-blog{
+    color: var(--rmk-dark-blue);
+    grid-area: 1/6/2/7;
+}
+
+#nav-blog:hover{
+    background-color: var(--rmk-light-blue);
+}
+
+#hamburger{
+background-color: white;
+border: none;
+cursor: pointer;
+grid-area: 1/6/2/7;
+}
+
+@media screen and (min-width: 500px){
+    #hamburger{
+            display: none;
+        }
+    .nav-buttons{
+        display: block;
+    }
+    #burgerMenu{
+        display:none !important;
+    }
+}
+
+/* Rules for the Hamburger Hover Effects */
+
+#indexAbout{ background-color: var(--rmk-red); }
+#indexAbout:hover{ background-color: var(--rmk-dark-red); }
+#indexWork{ background-color: var(--rmk-yellow-but-not-really); }
+#indexWork:hover{ background-color: var(--rmk-dark-yellow); }
+#indexArt{ background-color: var(--rmk-light-blue); }
+#indexArt:hover{ background-color: var(--rmk-dark-teal); }
+#indexBlog{ background-color: var(--rmk-blue); }
+#indexBlog:hover{ background-color: var(--rmk-dark-blue); }
+
+/* Index Page Rules */
+
 
 #index{
-    display: block;
     align-items: center;
     background-color: var(--rmk-white);
+    display: block;
 }
 
 #indexLogo{
-    margin: auto;
     border-radius: 2em;
     box-shadow: grey 0px 10px 20px;
-
+    margin: auto;
 }
 
 .homeBox{
+    align-items: center;
     color: var(--rmk-navy);
+    display: block;
+    margin-bottom: 2em;
     margin-left:auto;
     margin-right:auto;
     margin-top: 7em;
-    margin-bottom: 2em;
-    text-align: center;
-    align-items: center;
-    display: block;
-    padding: 3vmin;
     max-width: 600px;
-    /* line-height: 4em; */
+    padding: 3vmin;
+    text-align: center;
 }
 
 .homeBox header{
     margin-top: 1em;
 }
 
+.homeBox a:hover{
+    cursor: pointer;
+ }
+
+.homeBox button:hover{
+    cursor: pointer;
+}
+
+.homeLinks{
+    border-radius: 2em;
+    color: var(--rmk-white);
+    display: block;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    max-width: 400px;
+    padding: .5em;
+    text-transform: uppercase;
+    transition: background-color .5s;
+}
+
 .social{
     border-radius: 100%;
-    height: 4em;
-    width: 4em;
-    margin: 2vh 1vw;
     border: none;
-    max-width: 100px;
     display: flex;
+    height: 4em;
+    margin: 2vh 1vw;
+    max-width: 100px;
     transition: background-color .5s;
+    width: 4em;
 }
 
 .socials{
@@ -184,44 +399,18 @@ video{
     margin-top: 25%;
 }
 
-.homeLinks{
-    display: block;
-    padding: .5em;
-    max-width: 400px;
-    border-radius: 2em;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 1em;
-    margin-top: 1em;
-    color: var(--rmk-white);
-    transition: background-color .5s;
-    text-transform: uppercase;
-    font-size: 1.5em;
-}
-
-.homeBox a:hover{
-   cursor: pointer;
-}
-
-/* Rules for the Hamburger Hover Effects */
-#indexAbout{ background-color: var(--rmk-red); }
-#indexAbout:hover{ background-color: var(--rmk-dark-red); }
-#indexWork{ background-color: var(--rmk-yellow-but-not-really); }
-#indexWork:hover{ background-color: var(--rmk-dark-yellow); }
-#indexArt{ background-color: var(--rmk-light-blue); }
-#indexArt:hover{ background-color: var(--rmk-dark-teal); }
-#indexBlog{ background-color: var(--rmk-blue); }
-#indexBlog:hover{ background-color: var(--rmk-dark-blue); }
-
-
+/* Rules for the social media bubbles on the front page */
 
 #twitter{ background-color: var(--twitter); }
 #linkedin{ background-color: var(--linkedin);}
 #youtube{ background-color: var(--youtube); }
 #instagram{ background-color: var(--instagram); }
 
+#twitter:hover{ background-color: var(--twitter-dark); }
+#linkedin:hover{ background-color: var(--linkedin-dark); }
+#youtube:hover{ background-color: var(--youtube-dark); }
+#instagram:hover{ background-color: var(--instagram-dark); }
 
-/* Rules for the social media bubbles on the front page */
 #twitter img{
     margin-top: 30%;
     max-height:37.5%;
@@ -235,59 +424,45 @@ video{
 }
 
 #linkedin img{
+    margin-top: 25%;
     max-height: 45%;
     max-width: 45%;
-    margin-top: 25%;
 }
 
 #instagram img{
+    margin-top: 25%;
     max-height: 50%;
     max-width: 50%;
-    margin-top: 25%;
 }
 
-#twitter:hover{
-    background-color: var(--twitter-dark);
+
+/* About Page Rules */
+
+#bodyAbout{
+    background-color: var(--rmk-pink);
 }
 
-#linkedin:hover{
-    background-color: var(--linkedin-dark);
-}
-
-#youtube:hover{
-    background-color: var(--youtube-dark);
-}
-
-#instagram:hover{
-    background-color: var(--instagram-dark);
-}
-
-.homeBox button:hover{
-    cursor: pointer;
-}
-
-/* about page */
 
 .aboutSegment{
     background-color: white;
-    margin-top: 2em;
+    box-shadow: pink 0px 10px 20px;
+    margin-bottom: 2em;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 2em;
+    margin-top: 2em;
     padding: 2em;
-    box-shadow: pink 0px 10px 20px;
 }
 
 .aboutSegment h1{
-    text-align: center;
-    font-size: 3em;
     color: black;
+    font-size: 3em;
     padding-bottom: .5em;
+    text-align: center;
 }
 
 #aboutEmphasis{
-    margin-top: .5em;
     font-size: 1.3em;
+    margin-top: .5em;
 }
 
 #contact{
@@ -295,12 +470,12 @@ video{
 }
 
 #contactImage{
-    width: 400px;
-    margin-left: auto;
-    margin-right: auto;
+    border-radius: 100%;
     display: block;
     margin-bottom: 1em;
-    border-radius: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
 }
 
 #contactList{
@@ -316,40 +491,26 @@ video{
 }
 
 .aboutContact{
-    display: block;
     border-radius: 2em;
-    max-width: 400px;
-    padding: 10px;
-    text-align: center;
     border: 5px var(--rmk-red) solid;
+    color: var(--rmk-dark-red);
+    display: block;
+    font-family: robotobold;
     margin-bottom: .5em;
     margin-left: auto;
     margin-right: auto;
-    font-family: robotobold;
-    color: var(--rmk-dark-red);
-    transition: all .5s;
+    max-width: 400px;
+    padding: 10px;
+    text-align: center;
     transition-property: background-color, color;
+    transition: all .5s;
 }
 
-#lnkn{
-    border: 5px var(--linkedin) solid;
-}
-
-#twttr{
-    border: 5px var(--twitter) solid; 
-}
-
-#insta{
-    border: 5px var(--instagram) solid; 
-}
-
-#ytb{
-    border: 5px var(--youtube) solid; 
-}
-
-#spotify{
-    border: 5px var(--spotify) solid; 
-}
+#lnkn{ border: 5px var(--linkedin) solid; }
+#twttr{ border: 5px var(--twitter) solid; }
+#insta{ border: 5px var(--instagram) solid; }
+#ytb{ border: 5px var(--youtube) solid;}
+#spotify{ border: 5px var(--spotify) solid; }
 
 .aboutContact:hover{
     background-color: var(--rmk-red);
@@ -375,14 +536,6 @@ video{
     background-color: var(--spotify);
 }
 
-#firstResume{
-    margin-top: 100px;
-}
-
-#lastResume{
-    margin-bottom: 50px;
-}
-
 #resumeLink{
     background-color: var(--rmk-red);
     color: white;
@@ -390,8 +543,8 @@ video{
 }
 
 #resumeLink:hover{
-    cursor: pointer;
     background-color: var(--rmk-dark-red);
+    cursor: pointer;
 }
 
 #aboutMain{
@@ -404,12 +557,12 @@ video{
         grid-template-columns: .25fr 1fr 2em 2fr .25fr;
     }
     #aboutMe{
-        grid-area: 1 / 4 / 2 / 5;
         border-radius: 2em;
+        grid-area: 1 / 4 / 2 / 5;
     }
     #contact{
-      grid-area: 1 / 2 / 2 / 3;  
       border-radius: 2em;
+      grid-area: 1 / 2 / 2 / 3;  
     }
     #aboutEmphasis{
         font-size: 1.6em;
@@ -431,19 +584,31 @@ video{
 
 /* Resume Page */
 
+#bodyTest{
+    background-color: lightgray;
+}
+
 #resume{
     background-color: lightgray;
 }
 
 .resumeSegment{
     background-color: white;
+    box-shadow: darkgray 0px 10px 20px;
+    font-family: 'robotolight';
     margin-left: auto;
     margin-right: auto;
     margin-top:1em;
-    padding: 20px;
     max-width: 800px;
-    font-family: roboto;
-    box-shadow: darkgray 0px 10px 20px;
+    padding: 20px;
+}
+
+#firstResume{
+    margin-top: 100px;
+}
+
+#lastResume{
+    margin-bottom: 50px;
 }
 
 @media screen and (min-width: 845px){
@@ -453,15 +618,15 @@ video{
 }
 
 .resumeSegment h2{
-    text-transform: uppercase;
+    border-bottom: 2px lightgray solid;
     margin-bottom: .5em;
     padding-bottom: .5em;
-    border-bottom: 2px lightgray solid;
+    text-transform: uppercase;
 }
 
 .resumeSubsegment{
-    margin: 1em;
     border-radius: 1.5em;
+    margin: 1em;
     padding: 1em;
 }
 
@@ -495,55 +660,60 @@ video{
 
 /* Work Page*/
 
+#bodyWork{
+    margin-top: 100px;
+    background-color: var(--rmk-yellow);
+}
+
 .workSegment{
-    display: grid;
     background-color: white;
-    max-width: 1200px;
+    box-shadow: var(--rmk-orange) 0px 10px 20px;
+    display: grid;
     margin-left: auto;
     margin-right: auto;
     margin-top: 2em;
+    max-width: 1200px;
     padding: 2em;
-    box-shadow: var(--rmk-orange) 0px 10px 20px;
 }
 
 .workArticle{
-    display: block;
     background-color: white;
-    max-width: 1000px;
+    box-shadow: var(--rmk-orange) 0px 10px 20px;
+    display: block;
+    margin-bottom: 2em;
     margin-left: auto;
     margin-right: auto;
     margin-top: 2em;
-    margin-bottom: 2em;
+    max-width: 1000px;
     padding: 2em;
-    box-shadow: var(--rmk-orange) 0px 10px 20px;
 }
 
 .workSubheading{
-    font-family: roboto;
-    font-style: italic;
     color: gray;
+    font-family: 'robotobold_italic';
+    font-style: italic;
 }
 
 .workArticle .workImage{
-    text-align: center;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
 }
 
 
 .workHeading{
-    font-size: 1.05em;
-    font-family: d-din-bold;
-    text-transform: uppercase;
-    padding: 0px 0px .5em 1em;
     float: bottom;
+    font-family: d-din-bold;
+    font-size: 1.05em;
+    padding: 0px 0px .5em 1em;
+    text-transform: uppercase;
 }
 
 
 .workDescription{
+    font-size: 1.25em;
     padding-left: 1em;
     padding-right: 1em;
-    font-size: 1.25em;
 }
 
 #workLast{
@@ -551,17 +721,17 @@ video{
 }
 
 .workLink{
-    margin-left: 1em;
-    font-size: 1.25em;
-    font-family: robotobold;
-    text-transform: uppercase;
     background-color: var(--rmk-yellow-but-not-really);
-    color: white;
-    max-width: 8em;
-    text-align: center;
     border-radius: 2em;
-    padding: .5em;
+    color: white;
     cursor: pointer;
+    font-family: robotobold;
+    font-size: 1.25em;
+    margin-left: 1em;
+    max-width: 8em;
+    padding: .5em;
+    text-align: center;
+    text-transform: uppercase;
     transition: background-color .5s;
 }
 
@@ -609,21 +779,26 @@ video{
 }
 
 /* Main Art Page */
+
+#bodyArt{
+    background-color: var(--rmk-teal);
+}
+
 #mainArt{
-    display: grid;
-    max-width: 1024px;
-    margin-top: 120px;
-    margin-bottom: 1em;
     background-color: white;
-    padding: 1em;
     box-shadow: var(--rmk-light-blue) 10px 10px 20px;
+    display: grid;
+    margin-bottom: 1em;
+    margin-top: 120px;
+    max-width: 1024px;
+    padding: 1em;
 }
 
 #mainArt a{
-    padding: .5em;
-    transition: padding .5s;
     margin-left: auto;
     margin-right: auto;
+    padding: .5em;
+    transition: padding .5s;
 }
 
 #mainArt a:hover{
@@ -637,28 +812,28 @@ video{
 /* Individual Art*/
 
 #singleArt{
-    margin-top: 120px;
-    padding: 2em;
-    max-width: 1000px;
-    display:flex;
-    flex-flow: column nowrap;
+    align-items: flex-start;
     background-color: white;
     box-shadow: var(--rmk-blue) 0px 10px 20px;
+    display:flex;
+    flex-flow: column nowrap;
     margin-left: auto;
     margin-right: auto;
-    align-items: flex-start;
+    margin-top: 120px;
+    max-width: 1000px;
+    padding: 2em;
 }
 #singleArt picture{
-    order: 1;
     align-self: center;
+    order: 1;
 }
 
 #singleArt h1{
+    align-self: flex-start;
     color: var(--rmk-dark-teal);
+    font-size: 3em;
     order: 2;
     padding: .25em;
-    align-self: flex-start;
-    font-size: 3em;
     
 }
 @media screen and (min-width: 700px){
@@ -668,32 +843,32 @@ video{
 }
 
 #artLink{
-    border-radius: 2em;
     background-color: var(--rmk-light-blue);
+    border-radius: 2em;
+    color: white;
     font-family: robotobold;
     min-width: 150px;
+    order: 4;
     padding: 10px;
     text-align: center;
-    color: white;
-    transition: background-color .5s;
-    order: 4;
     text-transform: uppercase;
+    transition: background-color .5s;
 }
 
 #artLink:hover{
-    cursor: pointer;
     background-color: var(--rmk-dark-teal);
+    cursor: pointer;
 }
 
 #artDescription{
-    display: flex;
-    order: 3;
-    flex-flow: column nowrap;
-    border-top-width: 2px;
     border-top-color: var(--rmk-teal);
     border-top-style: solid;
-    padding-top: 1em;
+    border-top-width: 2px;
+    display: flex;
+    flex-flow: column nowrap;
     font-size: 1.25em;
+    order: 3;
+    padding-top: 1em;
 }
 
 #artDescription p{
@@ -709,39 +884,43 @@ video{
 @media screen and (min-width: 900px){
     #mainArt{
         display: grid;
-        margin-left: auto;
-        margin-right: auto;
         grid-template-columns: repeat(3 ,1fr);
         grid-template-rows: repeat(3 ,1fr);
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
 @media screen and (min-width: 600px) and (max-width: 900px){
     #mainArt{
         display: grid;
-        margin-left: auto;
-        margin-right: auto;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(5, 1fr);
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
 /* Blog Page */
+
+#bodyBlog{
+    background-color: var(--rmk-light-blue);
+}
 
 #firstBlog{
     margin-top: 6em;
 }
 
 .blogEntry{
-    display: block;
     background-color: white;
-    max-width: 1000px;
+    box-shadow: var(--rmk-navy) 0px 10px 20px;
+    display: block;
+    margin-bottom: 2em;
     margin-left: auto;
     margin-right: auto;
     margin-top: 2em;
-    margin-bottom: 2em;
+    max-width: 1000px;
     padding: 2em;
-    box-shadow: var(--rmk-navy) 0px 10px 20px;
 }
 
 @media screen and (min-width: 1070px){
@@ -751,35 +930,35 @@ video{
 }
 
 .blogSubheading{
-    font-family: roboto;
-    font-style: italic;
     color: gray;
+    font-family: 'robotobold';
+    font-style: italic;
 }
 
 .blogEntry .blogImage{
-    text-align: center;
-    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
+    max-width: 100%;
+    text-align: center;
 }
 
 
 .blogHeading{
-    font-size: 1.5em;
-    font-family: d-din-bold;
-    text-transform: uppercase;
-    padding: 0px 0px .5em 0px;
-    margin-bottom: 1.5em;
-    border-bottom-width: 2px;
     border-bottom-color: var(--rmk-blue);
     border-bottom-style: solid;
+    border-bottom-width: 2px;
+    font-family: d-din-bold;
+    font-size: 1.5em;
+    margin-bottom: 1.5em;
+    padding: 0px 0px .5em 0px;
+    text-transform: uppercase;
 }
 
 
 .blogContents{
+    font-size: 1.25em;
     padding-left: 1em;
     padding-right: 1em;
-    font-size: 1.25em;
 }
 
 #blogLast{
@@ -789,207 +968,3 @@ video{
 .blogImage img{
     border-radius: 1em;
 }
-
-/**/
-
-
-/* navigation header */
-
-    .headerNav{
-        position: fixed;
-        top: 0px;
-        background-color: white;
-        height: 75px;
-        width: 100%;
-        display: grid;
-        grid-template-columns: 40px auto repeat(4, 70px);
-    }
-
-    #burgerMenu{
-        position: fixed;
-        top: 43px;
-        background-color: white;
-        height: 100%;
-        width: 100%;
-        display: none;
-        font-size: 2em;
-        list-style-type: none;
-        text-transform: uppercase;
-    }
-
-    #burgerMenu .homeLinks{
-        position: relative;
-        height:75px;
-        padding: .1em;
-        left: -40px;
-        display: flex;
-        flex-flow: column nowrap;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 0px;
-        margin-bottom: 0px;
-        border-radius: 0px;;
-        max-width: 100%;
-        text-align: center;
-        color: white;
-    }
-
-    #navTest{
-        box-shadow: darkgrey 0px 10px 10px;
-    }
-
-    #navAbout{
-        box-shadow: var(--rmk-red) 0px 0px 20px;
-    }
-
-    #navWork{
-        box-shadow: var(--rmk-orange) 0px 0px 20px;
-    }
-
-    #navArt{
-        box-shadow: var(--rmk-blue) 0px 0px 20px;
-    }
-
-    #navBlog{
-        box-shadow: var(--rmk-navy) 0px 0px 20px;
-    }
-
-    .monogram{
-        writing-mode: vertical-rl;
-        font-size: 2em;
-        grid-area: 1 / 1 / 2 / 2;
-        text-align: center;
-        color: white;
-        font-family: d-dindin-bold;;
-        text-transform: uppercase;
-        margin: 0px;
-    }
-
-    .monogram:hover{
-        cursor:pointer;
-    }
-
-    #monoTest{
-        background-color: var(--rmk-black);
-    }
-
-    #monoAbout{
-        background-color: var(--rmk-dark-red);
-    }
-
-    #monoWork{
-        background-color: var(--rmk-dark-yellow);
-    }
-
-    #monoArt{
-        background-color: var(--rmk-dark-teal);
-    }
-
-    #monoBlog{
-        background-color: var(--rmk-dark-blue);
-    }
-
-
-    .nav-buttons:hover{
-        cursor: pointer;
-        transition: background-color .5s;
-    }
-
-    .nav-buttons{
-        font-size: 1.3em;
-        text-align: center;
-        font-family: d-dindin-bold;
-        text-transform: uppercase;
-        margin: 0px;
-        padding-top: 7px;
-        display: none;
-    }
-
-    .nav-buttons img {
-        max-height: 40px;
-    }
-
-    /* about button */
-
-        #nav-about{
-            color: var(--rmk-dark-red);
-            grid-area: 1/3/2/4;
-        }
-
-        #nav-about:hover{
-            background-color: var(--rmk-pink);
-        }
-
-    /* work button */
-
-        #nav-work{
-            color: var(--rmk-dark-yellow);
-            grid-area: 1/4/2/5;
-        }
-
-        #nav-work:hover{
-            background-color: var(--rmk-yellow);
-        }
-
-
-    /* art button */
-
-        #nav-art{
-            color: var(--rmk-dark-teal);
-            grid-area: 1/5/2/6;
-        }
-
-        #nav-art:hover{
-            background-color: var(--rmk-teal);
-        }
-
-    /* blog button */
-
-        #nav-blog{
-            color: var(--rmk-dark-blue);
-            grid-area: 1/6/2/7;
-        }
-
-        #nav-blog:hover{
-            background-color: var(--rmk-light-blue);
-        }
-
-/* Hamburger Button Test*/
-
-#hamburger{
-    grid-area: 1/6/2/7;
-    border: none;
-    background-color: white;
-    cursor: pointer;
-}
-
-@media screen and (min-width: 500px){
-    #hamburger{
-            display: none;
-        }
-    .nav-buttons{
-        display: block;
-    }
-    #burgerMenu{
-        display:none !important;
-    }
-}
-
-
-
-    #bodyTest{
-        background-color: lightgray;
-    }
-
-    #bodyWork{
-        margin-top: 100px;
-        background-color: var(--rmk-yellow);
-    }
-
-    #bodyArt{
-        background-color: var(--rmk-teal);
-    }
-
-    #bodyBlog{
-        background-color: var(--rmk-light-blue);
-    }
