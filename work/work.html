@@ -8,13 +8,28 @@
     </head>
     <body id="bodyWork"> 
 
-        <div class="navigation" id="navWork">
-            <div onclick="location.href='../index.html';" class="monogram" id="monoWork"><h1>RMK</h1></div>
-            <div onclick="location.href='../about/about.html';" class="nav-buttons" id="nav-about"><img src="../content/about.jpg"><h1>About</h1></div>
-            <div onclick="location.href='../work/work.html';" class="nav-buttons" id="nav-work"><img src="../content/work.jpg"><h1>Work</h1></div>
-            <div onclick="location.href='../art/art.html';"class="nav-buttons" id="nav-art"><img src="../content/art.jpg"><h1>Art</h1></div>
-            <div class="nav-buttons" id="nav-blog"><img src="../content/blog.jpg"><h1>Blog</h1></div>
-        </div>
+        <!-- navigation bar goes down here -->
+
+<script src="../hamburger.js"></script>
+<nav id="navWork"> 
+    <a href='../index.html'; class="monogram" id="monoWork"><h1>RMK</h1></a>
+    <a href='../about/about.html'; class="nav-buttons" id="nav-about"><img src="../content/about.png">About</a>
+    <a href='../work/work.html'; class="nav-buttons" id="nav-work"><img src="../content/work.png">Work</a>
+    <a href='../art/art.html'; class="nav-buttons" id="nav-art"><img src="../content/art.png">Art</a>
+    <a href='../blog/blog.html'; class="nav-buttons" id="nav-blog"><img src="../content/blog.png">Blog</a>
+    <button onclick="openMenu()" id="hamburger">
+        <img id=popoutButton src="../content/buttonE-2x.png">
+    </button>
+</nav>
+<ul id=burgerMenu>
+    <li><a class="homeLinks" id=indexAbout href='../about/about.html'>About</a></li>
+    <li><a class="homeLinks" id=indexWork href='../work/work.html'>Work</a></li>
+    <li><a class="homeLinks" id=indexArt href='../art/art.html'>Art</a></li>
+    <li><a class="homeLinks" id=indexBlog href='../blog/blog.html'>Blog</a></li>
+ </ul>
+
+<!-- ^^^^ navigation bar goes up here ^^^^  -->
+
 
         <div class="workSegment">
             <div class="workHeading">
@@ -26,9 +41,9 @@
             <div class="workDescription">
                 <p>A Star Wars fan-film about a father and his son fighting with lightsabers. Created using Adobe Premiere Pro and After Effects.</p>
             </div>
-            <div class="workLink">
+            <a href="work-duel.html" class="workLink">
                 Read more
-            </div>
+            </a>
         </div>
 
         <div class="workSegment">
@@ -41,9 +56,9 @@
             <div class="workDescription">
                 <p>Prioritizing interaction design, I reimagined Vellum, a wallpaper app, and rebranded it into a new app called Dreampapr. Because the original app appeared too generic, I focused on injecting personality into the design with improved animations and dynamics.</p>
             </div>
-            <div class="workLink">
+            <a href="work-dreampaper.html" class="workLink">
                 Read more
-            </div>
+            </a>
         </div>
 
         <div class="workSegment" id="workLast">
@@ -56,9 +71,9 @@
             <div class="workDescription">
                 <p>A rotoscope animation utilizing Photoshop and Premiere Pro. Created for a visual design course focusing on color.</p>
             </div>
-            <div class="workLink">
+            <a href="work-summer.html" class="workLink">
                 Read more
-            </div>
+            </a>
         </div>
         
     </body>

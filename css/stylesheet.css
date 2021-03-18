@@ -61,6 +61,10 @@ body{
     margin: 0px;
 }
 
+video{ 
+    width: 100% !important;
+    height: auto !important;
+}
 
 /* Typography */
 
@@ -584,7 +588,27 @@ body{
     border-radius: 1em;
 }
 
+#vertical video{
+    max-width: 50%;
+}
 
+@media screen and (min-width: 768px){
+    
+    .workSegment{
+        grid-template-columns: 2fr 3fr;
+        grid-template-rows: 7.5em 2fr; 
+    }
+
+    .workHeading{
+        grid-area: 1 / 1 / 2 / 3;
+    }
+
+    .workImage{
+        grid-area: 2 / 1 / 4 / 2;
+    }
+}
+
+/* Main Art Page */
 #mainArt{
     display: grid;
     max-width: 1024px;
@@ -709,26 +733,71 @@ body{
     }
 }
 
+/* Blog Page */
 
-@media screen and (min-width: 768px){
-    
-    .workSegment{
-        grid-template-columns: 2fr 3fr;
-        grid-template-rows: 7.5em 2fr; 
-    }
-
-    .workHeading{
-        grid-area: 1 / 1 / 2 / 3;
-    }
-
-    .workImage{
-        grid-area: 2 / 1 / 4 / 2;
-    }
+#firstBlog{
+    margin-top: 6em;
 }
+
+.blogEntry{
+    display: block;
+    background-color: white;
+    max-width: 1000px;
+    border-radius: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding: 2em;
+    box-shadow: var(--rmk-navy) 0px 10px 20px;
+}
+
+.blogSubheading{
+    font-family: roboto;
+    font-style: italic;
+    color: gray;
+}
+
+.blogEntry .blogImage{
+    text-align: center;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.blogHeading{
+    font-size: 1.5em;
+    font-family: d-din-bold;
+    text-transform: uppercase;
+    padding: 0px 0px .5em 0px;
+    margin-bottom: 1.5em;
+    border-bottom-width: 2px;
+    border-bottom-color: var(--rmk-blue);
+    border-bottom-style: solid;
+}
+
+
+.blogContents{
+    padding-left: 1em;
+    padding-right: 1em;
+    font-size: 1.25em;
+}
+
+#blogLast{
+    margin-bottom: 2em;
+}
+
+.blogImage img{
+    border-radius: 1em;
+}
+
+/**/
+
 
 /* navigation header */
 
-    .navigation{
+    nav{
         position: fixed;
         top: 0px;
         background-color: white;
@@ -736,6 +805,35 @@ body{
         width: 100%;
         display: grid;
         grid-template-columns: 40px auto repeat(4, 70px);
+    }
+
+    #burgerMenu{
+        position: fixed;
+        top: 43px;
+        background-color: white;
+        height: 100%;
+        width: 100%;
+        display: none;
+        font-size: 2em;
+        list-style-type: none;
+        text-transform: uppercase;
+    }
+
+    #burgerMenu .homeLinks{
+        position: relative;
+        height:75px;
+        padding: .1em;
+        left: -40px;
+        display: flex;
+        flex-flow: column nowrap;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        border-radius: 0px;;
+        max-width: 100%;
+        text-align: center;
+        color: white;
     }
 
     #navTest{
@@ -752,6 +850,10 @@ body{
 
     #navArt{
         box-shadow: var(--rmk-blue) 0px 0px 20px;
+    }
+
+    #navBlog{
+        box-shadow: var(--rmk-navy) 0px 0px 20px;
     }
 
     .monogram{
@@ -782,19 +884,28 @@ body{
         background-color: var(--rmk-dark-teal);
     }
 
+    #monoBlog{
+        background-color: var(--rmk-dark-blue);
+    }
+
+
     .nav-buttons:hover{
         cursor: pointer;
         transition: background-color .5s;
     }
 
     .nav-buttons{
-        font-size: .3em;
+        font-size: 1.3em;
         text-align: center;
+        font-family: d-dindin-bold;
+        text-transform: uppercase;
+        margin: 0px;
         padding-top: 7px;
+        display: none;
     }
 
     .nav-buttons img {
-        border-radius: 100%;
+        max-height: 40px;
     }
 
     /* about button */
@@ -842,6 +953,29 @@ body{
             background-color: var(--rmk-light-blue);
         }
 
+/* Hamburger Button Test*/
+
+#hamburger{
+    grid-area: 1/6/2/7;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 500px){
+    #hamburger{
+            display: none;
+        }
+    .nav-buttons{
+        display: block;
+    }
+    #burgerMenu{
+        display:none !important;
+    }
+}
+
+
+
     #bodyTest{
         background-color: lightgray;
     }
@@ -853,6 +987,10 @@ body{
 
     #bodyArt{
         background-color: var(--rmk-teal);
+    }
+
+    #bodyBlog{
+        background-color: var(--rmk-light-blue);
     }
 
 @media screen and (min-width: 320px){
