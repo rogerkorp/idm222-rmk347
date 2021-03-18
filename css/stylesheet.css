@@ -9,7 +9,7 @@
 --rmk-yellow: #fdeec4;
 --rmk-yellow-but-not-really: #f1ca5d;
 --rmk-orange: #ffd092;
---rmk-white: #fff4fd;
+--rmk-white: #f0f0f0;
 --rmk-dark-red: #680138;
 --rmk-dark-yellow: #6f6330;
 --rmk-dark-teal: #1e5553;
@@ -127,13 +127,13 @@ video{
 #index{
     display: block;
     align-items: center;
-    background-color: var(--rmk-light-blue);
+    background-color: var(--rmk-white);
 }
 
 #indexLogo{
-    border-radius: 3em;
     margin: auto;
-    box-shadow: var(--rmk-navy) 5px 5px 20px;
+    border-radius: 2em;
+    box-shadow: grey 0px 10px 20px;
 
 }
 
@@ -148,7 +148,11 @@ video{
     display: block;
     padding: 3vmin;
     max-width: 600px;
-    line-height: 4em;
+    /* line-height: 4em; */
+}
+
+.homeBox header{
+    margin-top: 1em;
 }
 
 .social{
@@ -294,8 +298,8 @@ video{
     margin-top: 2em;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 2em;
     padding: 2em;
-    border-radius: 2em;
     box-shadow: pink 0px 10px 20px;
 }
 
@@ -306,9 +310,9 @@ video{
     padding-bottom: .5em;
 }
 
-.aboutSegment img{
-    border-radius: 2em;
-    padding-bottom: .5em;
+#aboutEmphasis{
+    margin-top: .5em;
+    font-size: 1.3em;
 }
 
 #contact{
@@ -323,10 +327,17 @@ video{
     margin-bottom: 1em;
     border-radius: 100%;
 }
+
+#contactList{
+    list-style: none;
+    padding: 0;
+}
+
 #aboutMeImage{
     display: block;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: .5em;
 }
 
 .aboutContact{
@@ -398,12 +409,7 @@ video{
 }
 
 #resumeLink{
-    border-radius: 2em;
     background-color: var(--rmk-red);
-    font-family: robotobold;
-    max-width: 250px;
-    padding: 10px;
-    text-align: center;
     color: white;
     transition: background-color .5s;
 }
@@ -424,9 +430,14 @@ video{
     }
     #aboutMe{
         grid-area: 1 / 4 / 2 / 5;
+        border-radius: 2em;
     }
     #contact{
       grid-area: 1 / 2 / 2 / 3;  
+      border-radius: 2em;
+    }
+    #aboutEmphasis{
+        font-size: 1.6em;
     }
 }
 
@@ -456,9 +467,14 @@ video{
     margin-top:1em;
     padding: 20px;
     max-width: 800px;
-    border-radius: 2em;
     font-family: roboto;
     box-shadow: darkgray 0px 10px 20px;
+}
+
+@media screen and (min-width: 845px){
+    .resumeSegment{
+        border-radius: 2em;
+    }
 }
 
 .resumeSegment h2{
@@ -507,8 +523,7 @@ video{
 .workSegment{
     display: grid;
     background-color: white;
-    max-width: 800px;
-    border-radius: 2em;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 2em;
@@ -544,14 +559,11 @@ video{
 
 
 .workHeading{
-    font-size: 1.5em;
+    font-size: 1.05em;
     font-family: d-din-bold;
     text-transform: uppercase;
-    padding: 0px 0px .5em 0px;
-    margin-bottom: 1.5em;
-    border-bottom-width: 2px;
-    border-bottom-color: var(--rmk-orange);
-    border-bottom-style: solid;
+    padding: 0px 0px .5em 1em;
+    float: bottom;
 }
 
 
@@ -584,10 +596,6 @@ video{
     background-color: var(--rmk-dark-yellow);
 }
 
-.workImage img{
-    border-radius: 1em;
-}
-
 #vertical video{
     max-width: 50%;
 }
@@ -595,16 +603,28 @@ video{
 @media screen and (min-width: 768px){
     
     .workSegment{
-        grid-template-columns: 2fr 3fr;
-        grid-template-rows: 7.5em 2fr; 
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 4em 2fr; 
     }
 
     .workHeading{
-        grid-area: 1 / 1 / 2 / 3;
+        grid-area: 1 / 2 / 2 / 3;
     }
 
     .workImage{
-        grid-area: 2 / 1 / 4 / 2;
+        grid-area: 1 / 1 / 4 / 2;
+    }
+}
+
+@media screen and (min-width: 1224px){
+    .workHeading{
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (min-width: 1270px){
+    .workSegment{
+        border-radius: 2em;
     }
 }
 

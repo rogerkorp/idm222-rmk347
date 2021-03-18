@@ -7,48 +7,66 @@
         <link rel="stylesheet" href="../css/stylesheet.css">
     </head>
     <body> 
-       <!-- navigation bar goes down here -->
+    
+        <!-- navigation bar goes down here -->
 
     <script src="../hamburger.js"></script>
     <nav id="navAbout"> 
          <a href='../index.html'; class="monogram" id="monoAbout"><h1>RMK</h1></a>
-         <a href='../about/about.html'; class="nav-buttons" id="nav-about"><img src="../content/about.png">About</a>
-         <a href='../work/work.html'; class="nav-buttons" id="nav-work"><img src="../content/work.png">Work</a>
-         <a href='../art/art.html'; class="nav-buttons" id="nav-art"><img src="../content/art.png">Art</a>
-         <a href='../blog/blog.html'; class="nav-buttons" id="nav-blog"><img src="../content/blog.png">Blog</a>
+         <a href='../about/about.html'; class="nav-buttons" id="nav-about"><img src="../content/about.png" alt="about icon">About</a>
+         <a href='../work/work.html'; class="nav-buttons" id="nav-work"><img src="../content/work.png" alt="work icon">Work</a>
+         <a href='../art/art.html'; class="nav-buttons" id="nav-art"><img src="../content/art.png" alt="art icon" >Art</a>
+         <a href='../blog/blog.html'; class="nav-buttons" id="nav-blog"><img src="../content/blog.png" alt="blog icon" >Blog</a>
          <button onclick="openMenu()" id="hamburger">
              <img id=popoutButton src="../content/buttonE-2x.png">
          </button>
     </nav>
-    <ul id=burgerMenu>
-         <li><a class="homeLinks" id=indexAbout href='../about/about.html'>About</a></li>
+    <ul id=burgerMenu style="display: none;">
+        <li><a class="homeLinks" id=indexAbout href='../about/about.html'>About</a></li>
         <li><a class="homeLinks" id=indexWork href='../work/work.html'>Work</a></li>
         <li><a class="homeLinks" id=indexArt href='../art/art.html'>Art</a></li>
-     <li><a class="homeLinks" id=indexBlog href='../blog/blog.html'>Blog</a></li>
-        </ul>
+        <li><a class="homeLinks" id=indexBlog href='../blog/blog.html'>Blog</a></li>
+    </ul>
 
 <!-- ^^^^ navigation bar goes up here ^^^^  -->
 
         <main id=aboutMain>
-            <div class=aboutSegment id=aboutMe>
-                <h1>About Me</h1>
-                <img src="../content/about/itsme.jpg" id=aboutMeImage>
-                <h2>My name is Roger Korpics</h2>
+           
+            <article class=aboutSegment id=aboutMe>
+                <header><h1>About Me</h1></header>
+                <picture>
+                    <img srcset="../content/about/itsme-small.jpg 320w, 
+                        ../content/about/itsme-medium.jpg 720w,
+                        ../content/about/itsme-large.jpg 1000w"
+                        src="../content/about/itsme-small.jpg 320w"
+                        alt="A man touching his face with wet ink on his hands">
+                </picture>
+                <h2 id=aboutEmphasis>My name is Roger Korpics</h2>
                 <p>I’m a quirky UI, UX, and Graphic Designer, originally from the lovely coastal city of Newburyport, MA. I’m currently a full-time student at Drexel University in Philadelphia, PA, pursuing a Bachelor of Science in Interactive Digital Media.</p>
                 <p>In my spare time I enjoy expressing my ideas through designing, crafting, drawing, writing, and photography. For school assignments I develop user interfaces, prepare oral presentations, compose research reports, and develop my portfolio.</p>
                 <p>For my current work I rely on my MacBook Pro and the Adobe Creative Cloud. I primarily use Photoshop, Illustrator, and XD, in addition to Sketch, Flinto, and the Microsoft Office family of applications.</p>
-                <div onclick="location.href='resume.html';" id=resumeLink target="_blank">Click here to view my Resume</div>
-            </div>
-            <div class=aboutSegment id=contact>
-                <h1>Contact</h1>
-                <img src="../content/about/contact.gif" id=contactImage>
-                <a href="mailto:rogerkorpics@gmail.com" class="aboutContact">Email</a>
-                <a id="lnkn" href='https://www.linkedin.com/in/roger-korpics-ba8402197';" class="aboutContact">LinkedIn</a>
-                <a id="twttr" href='https://www.twitter.com/rkorpics';" class="aboutContact">Twitter</a>
-                <a id="insta" href='https://www.instagram.com/cropclock';" class="aboutContact">Instagram</a>
-                <a id="ytb" href='https://www.youtube.com/channel/UCECrHoXIwpkXWAmio8DumIg';" class="aboutContact">YouTube</a>
-                <a id="spotify" href='https://open.spotify.com/user/2csnb09nzww8hzoa803mpz22p?si=xqioav4pS1mL3VVDoVKPug';" class="aboutContact">Spotify</a>
-            </div>
+            </article>
+            
+            <aside class=aboutSegment id=contact>
+                <header><h1>Contact</h1></header>
+                <picture>
+                    <img srcset="../content/about/contact-small-no-motion.jpg 480w, 
+                        ../content/about/contact.gif 720w"
+                        src="../content/about/contact-small-no-motion.jpg 320w"
+                        alt="A phone with a notifaction bubble"
+                        id="contactImage">
+                </picture>
+                <ul id=contactList>
+                    <li><a href="mailto:rogerkorpics@gmail.com" class="aboutContact">Email</a></li>
+                    <li><a id="lnkn" href='https://www.linkedin.com/in/roger-korpics-ba8402197' class="aboutContact">LinkedIn</a></li>
+                    <li><a id="twttr" href='https://www.twitter.com/rkorpics' class="aboutContact">Twitter</a></li>
+                    <li><a id="insta" href='https://www.instagram.com/cropclock' class="aboutContact">Instagram</a></li>
+                    <li><a id="ytb" href='https://www.youtube.com/channel/UCECrHoXIwpkXWAmio8DumIg' class="aboutContact">YouTube</a></li>
+                    <li><a id="spotify" href='https://open.spotify.com/user/2csnb09nzww8hzoa803mpz22p?si=xqioav4pS1mL3VVDoVKPug' class="aboutContact">Spotify</a></li>
+                    <li><a href='resume.html' class=aboutContact id=resumeLink target="_blank">Resume</a></li>
+                </ul>
+            </aside>
+
         </main>
     </body>
 </html>

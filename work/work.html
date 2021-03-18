@@ -13,28 +13,28 @@
 <script src="../hamburger.js"></script>
 <nav id="navWork"> 
     <a href='../index.html'; class="monogram" id="monoWork"><h1>RMK</h1></a>
-    <a href='../about/about.html'; class="nav-buttons" id="nav-about"><img src="../content/about.png">About</a>
-    <a href='../work/work.html'; class="nav-buttons" id="nav-work"><img src="../content/work.png">Work</a>
-    <a href='../art/art.html'; class="nav-buttons" id="nav-art"><img src="../content/art.png">Art</a>
-    <a href='../blog/blog.html'; class="nav-buttons" id="nav-blog"><img src="../content/blog.png">Blog</a>
+    <a href='../about/about.html'; class="nav-buttons" id="nav-about"><img src="../content/about.png" alt="about icon">About</a>
+    <a href='../work/work.html'; class="nav-buttons" id="nav-work"><img src="../content/work.png" alt="work icon">Work</a>
+    <a href='../art/art.html'; class="nav-buttons" id="nav-art"><img src="../content/art.png" alt="art icon">Art</a>
+    <a href='../blog/blog.html'; class="nav-buttons" id="nav-blog"><img src="../content/blog.png" alt="art icon">Blog</a>
     <button onclick="openMenu()" id="hamburger">
         <img id=popoutButton src="../content/buttonE-2x.png">
     </button>
-</nav>
-<ul id=burgerMenu>
-    <li><a class="homeLinks" id=indexAbout href='../about/about.html'>About</a></li>
-    <li><a class="homeLinks" id=indexWork href='../work/work.html'>Work</a></li>
-    <li><a class="homeLinks" id=indexArt href='../art/art.html'>Art</a></li>
-    <li><a class="homeLinks" id=indexBlog href='../blog/blog.html'>Blog</a></li>
- </ul>
+    </nav>
+    <ul id=burgerMenu style="display: none;">
+        <li><a class="homeLinks" id=indexAbout href='../about/about.html'>About</a></li>
+        <li><a class="homeLinks" id=indexWork href='../work/work.html'>Work</a></li>
+        <li><a class="homeLinks" id=indexArt href='../art/art.html'>Art</a></li>
+        <li><a class="homeLinks" id=indexBlog href='../blog/blog.html'>Blog</a></li>
+    </ul>
 
 <!-- ^^^^ navigation bar goes up here ^^^^  -->
 
 
-        <div class="workSegment">
-            <div class="workHeading">
+        <section class="workSegment">
+            <header class="workHeading">
                 <h2>Duel of the Dorks</h2>
-            </div>
+            </header>
             <div class="workImage">
                 <img src="../content/work/images/duel-of-dorks.jpg">
             </div>
@@ -44,12 +44,12 @@
             <a href="work-duel.html" class="workLink">
                 Read more
             </a>
-        </div>
+        </section>
 
-        <div class="workSegment">
-            <div class="workHeading">
+        <section class="workSegment">
+            <header class="workHeading">
                 <h2>Dreampapr IXD</h2>
-            </div>
+            </header>
             <div class="workImage">
                 <img src="../content/work/images/dreampaper-interaction.jpg">
             </div>
@@ -59,12 +59,12 @@
             <a href="work-dreampaper.html" class="workLink">
                 Read more
             </a>
-        </div>
+        </section>
 
-        <div class="workSegment" id="workLast">
-            <div class="workHeading">
-                <h2>The Beginning of Summer</h2>
-            </div>
+        <section class="workSegment" id="workLast">
+            <header class="workHeading">
+                <h2>Beginning of Summer</h2>
+            </header>
             <div class="workImage">
                 <img src="../content/work/images/beginning-of-summer.jpg">
             </div>
@@ -74,7 +74,7 @@
             <a href="work-summer.html" class="workLink">
                 Read more
             </a>
-        </div>
+        </section>
         
     </body>
 </html>
