@@ -131,24 +131,24 @@ video{
 }
 
 #indexLogo{
-    border-radius: 100%;
+    border-radius: 3em;
     margin: auto;
+    box-shadow: var(--rmk-navy) 5px 5px 20px;
+
 }
 
 .homeBox{
-    background-color: var(--rmk-white);
     color: var(--rmk-navy);
     margin-left:auto;
     margin-right:auto;
-    margin-top: 2vmin;
+    margin-top: 7em;
     margin-bottom: 2em;
     text-align: center;
     align-items: center;
     display: block;
     padding: 3vmin;
     max-width: 600px;
-    border-radius: 2em;
-    box-shadow: var(--rmk-blue) 20px 20px 20px;
+    line-height: 4em;
 }
 
 .social{
