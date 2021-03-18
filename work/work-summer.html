@@ -8,27 +8,27 @@
     </head>
     <body id="bodyWork"> 
 
-        <!-- navigation bar goes down here -->
+     <!-- navigation bar goes down here -->
 
-        <script src="../hamburger.js"></script>
-        <nav id="navWork"> 
-            <a href='../index.html'; class="monogram" id="monoWork"><h1>RMK</h1></a>
-            <a href='../about/about.html'; class="nav-buttons" id="nav-about"><img src="../content/about.png" alt="about icon">About</a>
-            <a href='../work/work.html'; class="nav-buttons" id="nav-work"><img src="../content/work.png" alt="work icon">Work</a>
-            <a href='../art/art.html'; class="nav-buttons" id="nav-art"><img src="../content/art.png" alt="art icon">Art</a>
-            <a href='../blog/blog.html'; class="nav-buttons" id="nav-blog"><img src="../content/blog.png" alt="art icon">Blog</a>
-            <button onclick="openMenu()" id="hamburger">
-                <img id=popoutButton src="../content/buttonE-2x.png">
-            </button>
-            </nav>
-            <ul id=burgerMenu style="display: none;">
-                <li><a class="homeLinks" id=indexAbout href='../about/about.html'>About</a></li>
-                <li><a class="homeLinks" id=indexWork href='../work/work.html'>Work</a></li>
-                <li><a class="homeLinks" id=indexArt href='../art/art.html'>Art</a></li>
-                <li><a class="homeLinks" id=indexBlog href='../blog/blog.html'>Blog</a></li>
-            </ul>
-        
-        <!-- ^^^^ navigation bar goes up here ^^^^  -->
+     <script src="../hamburger.js"></script>
+     <nav class="headerNav" id="navWork"> 
+          <a href='../index.html' class="monogram" id="monoWork">RMK</a>
+          <a href='../about/about.html' class="nav-buttons" id="nav-about"><img src="../content/about.png" alt="about icon">About</a>
+          <a href='../work/work.html' class="nav-buttons" id="nav-work"><img src="../content/work.png" alt="work icon">Work</a>
+          <a href='../art/art.html' class="nav-buttons" id="nav-art"><img src="../content/art.png" alt="art icon" >Art</a>
+          <a href='../blog/blog.html' class="nav-buttons" id="nav-blog"><img src="../content/blog.png" alt="blog icon" >Blog</a>
+          <button onclick="openMenu()" id="hamburger">
+              <img id=popoutButton src="../content/buttonE-2x.png" alt="menu button">
+          </button>
+     </nav>
+     <ul id=burgerMenu style="display: none;">
+         <li><a class="homeLinks" id=indexAbout href='../about/about.html'>About</a></li>
+         <li><a class="homeLinks" id=indexWork href='../work/work.html'>Work</a></li>
+         <li><a class="homeLinks" id=indexArt href='../art/art.html'>Art</a></li>
+         <li><a class="homeLinks" id=indexBlog href='../blog/blog.html'>Blog</a></li>
+     </ul>
+ 
+ <!-- ^^^^ navigation bar goes up here ^^^^  -->
 
         <article class="workArticle">
             <header class="workHeading">
@@ -40,10 +40,10 @@
                     <source src="../content/work/videos/beginning-of-summer.mp4">
                 </video>
             </figure>
-            <main class="workDescription">
+            <div class="workDescription">
                 <p>This was a video I did as my final project for a design course. For this I filmed a basic recording of myself walking through a house, and rotoscoped the entire clip using Photoshop. I then finished the rest of the project in Premiere Pro, where I overlayed the animation on top of some other footage I filmed at around the same area. </p>
                 <p>The project was finished in June 2020</p>
-            </main>
+            </div>
             <a href="work.html" class="workLink">
                 Go Back
             </a>

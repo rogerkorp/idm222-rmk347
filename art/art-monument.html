@@ -7,18 +7,19 @@
         <link rel="stylesheet" href="../css/stylesheet.css">
     </head>
     <body id="bodyArt"> 
-        <!-- navigation bar goes down here -->
+   
+<!-- navigation bar goes down here -->
 
-<script src="../hamburger.js"></script>
-<nav id="navArt"> 
-    <a href='../index.html'; class="monogram" id="monoArt"><h1>RMK</h1></a>
-    <a href='../about/about.html'; class="nav-buttons" id="nav-about"><img src="../content/about.png" alt="about icon">About</a>
-    <a href='../work/work.html'; class="nav-buttons" id="nav-work"><img src="../content/work.png" alt="work icon">Work</a>
-    <a href='../art/art.html'; class="nav-buttons" id="nav-art"><img src="../content/art.png" alt="art icon">Art</a>
-    <a href='../blog/blog.html'; class="nav-buttons" id="nav-blog"><img src="../content/blog.png" alt="art icon">Blog</a>
-    <button onclick="openMenu()" id="hamburger">
-        <img id=popoutButton src="../content/buttonE-2x.png">
-    </button>
+    <script src="../hamburger.js"></script>
+    <nav class="headerNav" id="navArt"> 
+         <a href='../index.html' class="monogram" id="monoArt">RMK</a>
+         <a href='../about/about.html' class="nav-buttons" id="nav-about"><img src="../content/about.png" alt="about icon">About</a>
+         <a href='../work/work.html' class="nav-buttons" id="nav-work"><img src="../content/work.png" alt="work icon">Work</a>
+         <a href='../art/art.html' class="nav-buttons" id="nav-art"><img src="../content/art.png" alt="art icon" >Art</a>
+         <a href='../blog/blog.html' class="nav-buttons" id="nav-blog"><img src="../content/blog.png" alt="blog icon" >Blog</a>
+         <button onclick="openMenu()" id="hamburger">
+             <img id=popoutButton src="../content/buttonE-2x.png" alt="menu button">
+         </button>
     </nav>
     <ul id=burgerMenu style="display: none;">
         <li><a class="homeLinks" id=indexAbout href='../about/about.html'>About</a></li>
@@ -28,25 +29,24 @@
     </ul>
 
 <!-- ^^^^ navigation bar goes up here ^^^^  -->
-        <main id=singleArt>
-           <header><h1>Monuments of Man</h1></header> 
-           
-           <figure>
+      
+<main id=singleArt>
+    <header><h1>Monuments of Man</h1></header> 
+        <figure>
             <picture>
                 <img srcset="../content/art/full-images/hand-small.jpg 320w,
                             ../content/art/full-images/hand-medium.jpg 720w,
                             ../content/art/full-images/hand-large.png 1000w"
+                        sizes="(min-width: 320px) 720px, 100vw"
                         src="../content/art/full-images/hand-small.jpg"
                         alt="a house resting on an old statue of a hand">
             </picture>
-        </figure>
-        
             <figcaption id=artDescription>
                 <p>A pixel art rending of a house sitting on top of an overgrown statue's hand.</p>
                 <p>Rendered using a combination of Paint.net and Microsoft Paint.</p>
             </figcaption>
-           
-            <a id="artLink" href="art.html">Back</a>
-        </main>
-    </body>
+        </figure>
+    <a id="artLink" href="art.html">Back</a>
+</main>
+</body>
 </html>

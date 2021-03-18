@@ -7,18 +7,19 @@
         <link rel="stylesheet" href="../css/stylesheet.css">
     </head>
     <body id="bodyArt"> 
-        <!-- navigation bar goes down here -->
 
-<script src="../hamburger.js"></script>
-<nav id="navArt"> 
-    <a href='../index.html'; class="monogram" id="monoArt"><h1>RMK</h1></a>
-    <a href='../about/about.html'; class="nav-buttons" id="nav-about"><img src="../content/about.png" alt="about icon">About</a>
-    <a href='../work/work.html'; class="nav-buttons" id="nav-work"><img src="../content/work.png" alt="work icon">Work</a>
-    <a href='../art/art.html'; class="nav-buttons" id="nav-art"><img src="../content/art.png" alt="art icon">Art</a>
-    <a href='../blog/blog.html'; class="nav-buttons" id="nav-blog"><img src="../content/blog.png" alt="art icon">Blog</a>
-    <button onclick="openMenu()" id="hamburger">
-        <img id=popoutButton src="../content/buttonE-2x.png">
-    </button>
+    <!-- navigation bar goes down here -->
+
+    <script src="../hamburger.js"></script>
+    <nav class="headerNav" id="navArt"> 
+         <a href='../index.html' class="monogram" id="monoArt">RMK</a>
+         <a href='../about/about.html' class="nav-buttons" id="nav-about"><img src="../content/about.png" alt="about icon">About</a>
+         <a href='../work/work.html' class="nav-buttons" id="nav-work"><img src="../content/work.png" alt="work icon">Work</a>
+         <a href='../art/art.html' class="nav-buttons" id="nav-art"><img src="../content/art.png" alt="art icon" >Art</a>
+         <a href='../blog/blog.html' class="nav-buttons" id="nav-blog"><img src="../content/blog.png" alt="blog icon" >Blog</a>
+         <button onclick="openMenu()" id="hamburger">
+             <img id=popoutButton src="../content/buttonE-2x.png" alt="menu button">
+         </button>
     </nav>
     <ul id=burgerMenu style="display: none;">
         <li><a class="homeLinks" id=indexAbout href='../about/about.html'>About</a></li>
@@ -28,23 +29,24 @@
     </ul>
 
 <!-- ^^^^ navigation bar goes up here ^^^^  -->
+
         <main id=singleArt>
            <header><h1>Autumn At Home</h1></header> 
            
-           <figure>
-            <picture>
-                <img srcset="../content/art/full-images/autumn-chill-small.jpg 320w,
-                            ../content/art/full-images/autumn-chill-medium.jpg 720w,
-                            ../content/art/full-images/autumn-chill-large.jpg 1000w"
-                        src="../content/art/full-images/autumn-chill-small.jpg"
-                        alt="a picture of a bedroom with a cat sleeping on the bed">
-            </picture>
-        </figure>
-        
-            <figcaption id=artDescription>
-                <p>A simple, isometric depiction of a cat resting on top of a warm bed.</p>
-                <p>Rendered using Adobe Illustrator, Colorized using Procreate.</p>
-            </figcaption>
+            <figure>
+                <picture>
+                    <img srcset="../content/art/full-images/autumn-chill-small.jpg 320w,
+                                ../content/art/full-images/autumn-chill-medium.jpg 720w,
+                                ../content/art/full-images/autumn-chill-large.jpg 1000w"
+                            sizes="(min-width: 320px) 720px, 100vw"
+                            src="../content/art/full-images/autumn-chill-small.jpg"
+                            alt="a picture of a bedroom with a cat sleeping on the bed">
+                </picture>
+                <figcaption id=artDescription>
+                    <p>A simple, isometric depiction of a cat resting on top of a warm bed.</p>
+                    <p>Rendered using Adobe Illustrator, Colorized using Procreate.</p>
+                </figcaption>
+            </figure>
            
             <a id="artLink" href="art.html">Back</a>
         </main>

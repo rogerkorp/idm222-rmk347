@@ -203,54 +203,25 @@ video{
    cursor: pointer;
 }
 
-#indexAbout{
-    background-color: var(--rmk-red);
-}
+/* Rules for the Hamburger Hover Effects */
+#indexAbout{ background-color: var(--rmk-red); }
+#indexAbout:hover{ background-color: var(--rmk-dark-red); }
+#indexWork{ background-color: var(--rmk-yellow-but-not-really); }
+#indexWork:hover{ background-color: var(--rmk-dark-yellow); }
+#indexArt{ background-color: var(--rmk-light-blue); }
+#indexArt:hover{ background-color: var(--rmk-dark-teal); }
+#indexBlog{ background-color: var(--rmk-blue); }
+#indexBlog:hover{ background-color: var(--rmk-dark-blue); }
 
-#indexAbout:hover{
-    background-color: var(--rmk-dark-red);
-}
 
-#indexWork{
-    background-color: var(--rmk-yellow-but-not-really);
-}
 
-#indexWork:hover{
-    background-color: var(--rmk-dark-yellow);
-}
+#twitter{ background-color: var(--twitter); }
+#linkedin{ background-color: var(--linkedin);}
+#youtube{ background-color: var(--youtube); }
+#instagram{ background-color: var(--instagram); }
 
-#indexArt{
-    background-color: var(--rmk-light-blue);
-}
 
-#indexArt:hover{
-    background-color: var(--rmk-dark-teal);
-}
-
-#indexBlog{
-    background-color: var(--rmk-blue);
-}
-
-#indexBlog:hover{
-    background-color: var(--rmk-dark-blue);
-}
-
-#twitter{
-    background-color: var(--twitter);
-}
-
-#linkedin{
-    background-color: var(--linkedin);
-}
-
-#youtube{
-    background-color: var(--youtube);
-}
-
-#instagram{
-    background-color: var(--instagram);
-}
-
+/* Rules for the social media bubbles on the front page */
 #twitter img{
     margin-top: 30%;
     max-height:37.5%;
@@ -290,8 +261,6 @@ video{
 #instagram:hover{
     background-color: var(--instagram-dark);
 }
-
-
 
 .homeBox button:hover{
     cursor: pointer;
@@ -681,7 +650,6 @@ video{
 }
 #singleArt picture{
     order: 1;
-    padding: 1em;
     align-self: center;
 }
 
@@ -827,7 +795,7 @@ video{
 
 /* navigation header */
 
-    nav{
+    .headerNav{
         position: fixed;
         top: 0px;
         background-color: white;
@@ -888,10 +856,13 @@ video{
 
     .monogram{
         writing-mode: vertical-rl;
-        font-size: .5em;
+        font-size: 2em;
         grid-area: 1 / 1 / 2 / 2;
         text-align: center;
         color: white;
+        font-family: d-dindin-bold;;
+        text-transform: uppercase;
+        margin: 0px;
     }
 
     .monogram:hover{

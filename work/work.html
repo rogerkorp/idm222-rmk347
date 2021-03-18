@@ -10,26 +10,25 @@
 
         <!-- navigation bar goes down here -->
 
-<script src="../hamburger.js"></script>
-<nav id="navWork"> 
-    <a href='../index.html'; class="monogram" id="monoWork"><h1>RMK</h1></a>
-    <a href='../about/about.html'; class="nav-buttons" id="nav-about"><img src="../content/about.png" alt="about icon">About</a>
-    <a href='../work/work.html'; class="nav-buttons" id="nav-work"><img src="../content/work.png" alt="work icon">Work</a>
-    <a href='../art/art.html'; class="nav-buttons" id="nav-art"><img src="../content/art.png" alt="art icon">Art</a>
-    <a href='../blog/blog.html'; class="nav-buttons" id="nav-blog"><img src="../content/blog.png" alt="art icon">Blog</a>
-    <button onclick="openMenu()" id="hamburger">
-        <img id=popoutButton src="../content/buttonE-2x.png">
-    </button>
-    </nav>
-    <ul id=burgerMenu style="display: none;">
-        <li><a class="homeLinks" id=indexAbout href='../about/about.html'>About</a></li>
-        <li><a class="homeLinks" id=indexWork href='../work/work.html'>Work</a></li>
-        <li><a class="homeLinks" id=indexArt href='../art/art.html'>Art</a></li>
-        <li><a class="homeLinks" id=indexBlog href='../blog/blog.html'>Blog</a></li>
-    </ul>
-
-<!-- ^^^^ navigation bar goes up here ^^^^  -->
-
+        <script src="../hamburger.js"></script>
+        <nav class="headerNav" id="navWork"> 
+             <a href='../index.html' class="monogram" id="monoWork">RMK</a>
+             <a href='../about/about.html' class="nav-buttons" id="nav-about"><img src="../content/about.png" alt="about icon">About</a>
+             <a href='../work/work.html' class="nav-buttons" id="nav-work"><img src="../content/work.png" alt="work icon">Work</a>
+             <a href='../art/art.html' class="nav-buttons" id="nav-art"><img src="../content/art.png" alt="art icon" >Art</a>
+             <a href='../blog/blog.html' class="nav-buttons" id="nav-blog"><img src="../content/blog.png" alt="blog icon" >Blog</a>
+             <button onclick="openMenu()" id="hamburger">
+                 <img id=popoutButton src="../content/buttonE-2x.png" alt="menu button">
+             </button>
+        </nav>
+        <ul id=burgerMenu style="display: none;">
+            <li><a class="homeLinks" id=indexAbout href='../about/about.html'>About</a></li>
+            <li><a class="homeLinks" id=indexWork href='../work/work.html'>Work</a></li>
+            <li><a class="homeLinks" id=indexArt href='../art/art.html'>Art</a></li>
+            <li><a class="homeLinks" id=indexBlog href='../blog/blog.html'>Blog</a></li>
+        </ul>
+    
+    <!-- ^^^^ navigation bar goes up here ^^^^  -->
 
         <section class="workSegment">
             <header class="workHeading">
@@ -40,6 +39,7 @@
                 <img srcset="../content/work/images/duel-of-dorks-small.jpg 320w,
                         ../content/work/images/duel-of-dorks-medium.jpg 720w,
                         ../content/work/images/duel-of-dorks-large.jpg 1000w"
+                        sizes="(min-width: 320px) 720px, 100vw"
                         src="../content/work/images/duel-of-dorks-small.jpg"
                         alt="two men fighting with lightsabers">
             </picture>
@@ -61,6 +61,7 @@
                 <img srcset="../content/work/images/dreampaper-interaction-small.jpg 320w,
                         ../content/work/images/dreampaper-interaction-medium.jpg 720w,
                         ../content/work/images/dreampaper-interaction-large.jpg 1000w"
+                        sizes="(min-width: 320px) 720px, 100vw"
                         src="../content/work/images/dreampaper-interaction-small.jpg"
                         alt="a rough draft of a interaction, drawn on graph paper">
             </picture>
@@ -82,6 +83,7 @@
                 <img srcset="../content/work/images/beginning-of-summer-small.jpg 320w,
                         ../content/work/images/beginning-of-summer-medium.jpg 720w,
                         ../content/work/images/beginning-of-summer-large.jpg 1000w"
+                        sizes="(min-width: 320px) 720px, 100vw"
                         src="../content/work/images/beginning-of-summer-small.jpg"
                         alt="an outline of a cat standing in the middle of a hallway">
             </picture>

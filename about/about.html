@@ -11,14 +11,14 @@
         <!-- navigation bar goes down here -->
 
     <script src="../hamburger.js"></script>
-    <nav id="navAbout"> 
-         <a href='../index.html'; class="monogram" id="monoAbout"><h1>RMK</h1></a>
-         <a href='../about/about.html'; class="nav-buttons" id="nav-about"><img src="../content/about.png" alt="about icon">About</a>
-         <a href='../work/work.html'; class="nav-buttons" id="nav-work"><img src="../content/work.png" alt="work icon">Work</a>
-         <a href='../art/art.html'; class="nav-buttons" id="nav-art"><img src="../content/art.png" alt="art icon" >Art</a>
-         <a href='../blog/blog.html'; class="nav-buttons" id="nav-blog"><img src="../content/blog.png" alt="blog icon" >Blog</a>
+    <nav class="headerNav" id="navAbout"> 
+         <a href='../index.html' class="monogram" id="monoAbout">RMK</a>
+         <a href='../about/about.html' class="nav-buttons" id="nav-about"><img src="../content/about.png" alt="about icon">About</a>
+         <a href='../work/work.html' class="nav-buttons" id="nav-work"><img src="../content/work.png" alt="work icon">Work</a>
+         <a href='../art/art.html' class="nav-buttons" id="nav-art"><img src="../content/art.png" alt="art icon" >Art</a>
+         <a href='../blog/blog.html' class="nav-buttons" id="nav-blog"><img src="../content/blog.png" alt="blog icon" >Blog</a>
          <button onclick="openMenu()" id="hamburger">
-             <img id=popoutButton src="../content/buttonE-2x.png">
+             <img id=popoutButton src="../content/buttonE-2x.png" alt="menu button">
          </button>
     </nav>
     <ul id=burgerMenu style="display: none;">
@@ -35,10 +35,11 @@
             <article class=aboutSegment id=aboutMe>
                 <header><h1>About Me</h1></header>
                 <picture>
-                    <img srcset="../content/about/itsme-small.jpg 320w, 
+                    <img srcset="../content/about/itsme-small.jpg 320w,
                         ../content/about/itsme-medium.jpg 720w,
                         ../content/about/itsme-large.jpg 1000w"
-                        src="../content/about/itsme-small.jpg 320w"
+                        sizes="(min-width: 320px) 720px, 100vw"
+                        src="../content/about/itsme-small.jpg"
                         alt="A man touching his face with wet ink on his hands">
                 </picture>
                 <h2 id=aboutEmphasis>My name is Roger Korpics</h2>
@@ -52,7 +53,8 @@
                 <picture>
                     <img srcset="../content/about/contact-small-no-motion.jpg 480w, 
                         ../content/about/contact.gif 720w"
-                        src="../content/about/contact-small-no-motion.jpg 320w"
+                        sizes="(min-width: 480px) 100vw"
+                        src="../content/about/contact-small-no-motion.jpg"
                         alt="A phone with a notifaction bubble"
                         id="contactImage">
                 </picture>

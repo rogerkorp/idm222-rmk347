@@ -7,18 +7,19 @@
         <link rel="stylesheet" href="../css/stylesheet.css">
     </head>
     <body id="bodyArt"> 
-        <!-- navigation bar goes down here -->
 
-<script src="../hamburger.js"></script>
-<nav id="navArt"> 
-    <a href='../index.html'; class="monogram" id="monoArt"><h1>RMK</h1></a>
-    <a href='../about/about.html'; class="nav-buttons" id="nav-about"><img src="../content/about.png" alt="about icon">About</a>
-    <a href='../work/work.html'; class="nav-buttons" id="nav-work"><img src="../content/work.png" alt="work icon">Work</a>
-    <a href='../art/art.html'; class="nav-buttons" id="nav-art"><img src="../content/art.png" alt="art icon">Art</a>
-    <a href='../blog/blog.html'; class="nav-buttons" id="nav-blog"><img src="../content/blog.png" alt="art icon">Blog</a>
-    <button onclick="openMenu()" id="hamburger">
-        <img id=popoutButton src="../content/buttonE-2x.png">
-    </button>
+    <!-- navigation bar goes down here -->
+
+    <script src="../hamburger.js"></script>
+    <nav class="headerNav" id="navArt"> 
+         <a href='../index.html' class="monogram" id="monoArt">RMK</a>
+         <a href='../about/about.html' class="nav-buttons" id="nav-about"><img src="../content/about.png" alt="about icon">About</a>
+         <a href='../work/work.html' class="nav-buttons" id="nav-work"><img src="../content/work.png" alt="work icon">Work</a>
+         <a href='../art/art.html' class="nav-buttons" id="nav-art"><img src="../content/art.png" alt="art icon" >Art</a>
+         <a href='../blog/blog.html' class="nav-buttons" id="nav-blog"><img src="../content/blog.png" alt="blog icon" >Blog</a>
+         <button onclick="openMenu()" id="hamburger">
+             <img id=popoutButton src="../content/buttonE-2x.png" alt="menu button">
+         </button>
     </nav>
     <ul id=burgerMenu style="display: none;">
         <li><a class="homeLinks" id=indexAbout href='../about/about.html'>About</a></li>
@@ -28,19 +29,20 @@
     </ul>
 
 <!-- ^^^^ navigation bar goes up here ^^^^  -->
+
         <main id=singleArt>
            <header><h1>Fox</h1></header> 
            
            <figure>
-            <picture>
-                <img src="../content/art/full-images/fox.png">
-            </picture>
-        </figure>
-        
-            <figcaption id=artDescription>
-                <p>A pixel art rendering of a firey fox lingering in the darkness.</p>
-                <p>Rendered using Microsoft Paint.</p>
-            </figcaption>
+                <picture>
+                    <img src="../content/art/full-images/fox.png"
+                    alt="a picture of a fox">
+                </picture>
+                <figcaption id=artDescription>
+                    <p>A pixel art rendering of a firey fox lingering in the darkness.</p>
+                    <p>Rendered using Microsoft Paint.</p>
+                </figcaption>
+            </figure>
            
             <a id="artLink" href="art.html">Back</a>
         </main>
