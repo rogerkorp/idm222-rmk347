@@ -52,7 +52,9 @@ i{
 }
 
 img{ /* This prevents all images on the site from overflowing. */
-    max-width: 100%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 a{
@@ -540,13 +542,15 @@ grid-area: 1/6/2/7;
 }
 
 #resumeLink{
-    background-color: var(--rmk-red);
+    background-color: var(--rmk-black);
+    border-color: var(--rmk-black);
     color: white;
     transition: background-color .5s;
 }
 
 #resumeLink:hover{
-    background-color: var(--rmk-dark-red);
+    background-color: var(--rmk-white);
+    color: var(--rmk-black);
     cursor: pointer;
 }
 
@@ -771,7 +775,7 @@ grid-area: 1/6/2/7;
 
 @media screen and (min-width: 1224px){
     .workHeading{
-        font-size: 1.5em;
+        font-size: 1.20em;
     }
 }
 
